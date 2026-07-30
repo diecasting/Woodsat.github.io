@@ -1,0 +1,38 @@
+# ==========================================================================
+# menus.ja.toml — Industrial Manufacturer Template (日本語 Navigation)
+# ==========================================================================
+
+[[main]]
+  name = "ホーム"
+  url = "/ja/"
+  weight = 1
+
+[[main]]
+  name = "サービス"
+  url = "/ja/services/"
+  weight = 2
+
+[[main]]
+  name = "材料"
+  url = "/ja/materials/"
+  weight = 3
+
+[[main]]
+  name = "業界"
+  url = "/ja/industries/"
+  weight = 4
+
+[[main]]
+  name = "プロセス"
+  url = "/ja/processes/"
+  weight = 5
+
+[[main]]
+  name = "リソース"
+  url = "/ja/resources/"
+  weight = 6
+
+[[main]]
+  name = "お問い合わせ"
+  url = "/ja/contact/"
+  weight = 7

@@ -1,0 +1,38 @@
+# ==========================================================================
+# menus.de.toml — Industrial Manufacturer Template (Deutsch Navigation)
+# ==========================================================================
+
+[[main]]
+  name = "Start"
+  url = "/de/"
+  weight = 1
+
+[[main]]
+  name = "Leistungen"
+  url = "/de/services/"
+  weight = 2
+
+[[main]]
+  name = "Werkstoffe"
+  url = "/de/materials/"
+  weight = 3
+
+[[main]]
+  name = "Branchen"
+  url = "/de/industries/"
+  weight = 4
+
+[[main]]
+  name = "Prozesse"
+  url = "/de/processes/"
+  weight = 5
+
+[[main]]
+  name = "Ressourcen"
+  url = "/de/resources/"
+  weight = 6
+
+[[main]]
+  name = "Kontakt"
+  url = "/de/contact/"
+  weight = 7

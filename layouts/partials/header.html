@@ -1,0 +1,44 @@
+{{- /* header.html — Premium industrial site navigation
+   - sticky, 1200px centered container
+   - logo mark + wordmark
+   - dropdown-capable menu (data-driven)
+   - inline "Get a Quote" CTA
+   - mobile responsive hamburger
+   Only layout/styling; no content/SEO/schema changes. */ -}}
+<header class="site-header">
+  <nav class="nav-container" aria-label="Primary">
+    <a href="{{ .Site.BaseURL }}" class="nav-logo">
+      {{- $mark := .Site.Params.branding.logo_mark | default (substr (.Site.Params.companyName | default .Site.Title) 0 2 | upper) -}}
+      {{- with .Site.Params.branding.logo -}}
+      <img class="logo-img" src="{{ . | absURL }}" alt="{{ $.Site.Params.companyName | default .Site.Title }}" loading="lazy" decoding="async">
+      {{- else -}}
+      <span class="logo-mark">{{ $mark }}</span>
+      {{- end -}}
+      <span class="logo-text">{{ .Site.Params.companyName | default .Site.Title }}<small>{{ .Site.Params.branding.logo_subtitle | default .Site.Params.companyTagline }}</small></span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"
+            onclick="var n=this.parentElement; n.classList.toggle('nav-open'); this.setAttribute('aria-expanded', n.classList.contains('nav-open'));">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu">
+      {{ range .Site.Menus.main }}
+      <li class="nav-item{{ if .HasChildren }} nav-item-has-children{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }}{{ if .HasChildren }}<span aria-hidden="true">▾</span>{{ end }}</a>
+        {{ if .HasChildren }}
+        <ul class="nav-submenu">
+          {{ range .Children }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+
+    {{- $quoteHref := "#rfq" -}}
+    {{- if not .IsHome -}}{{- $quoteHref = printf "%s#rfq" .Site.BaseURL -}}{{- end -}}
+    <a href="{{ $quoteHref }}" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+  </nav>
+</header>

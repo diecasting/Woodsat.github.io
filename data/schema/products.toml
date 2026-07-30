@@ -1,0 +1,78 @@
+# ==========================================================================
+# products.toml — Product Categories & Material Specifications [SITE LAYER]
+# ==========================================================================
+# CUSTOMIZE: Add your product categories with material grades.
+# Feeds Product schema and material specification sections.
+# ==========================================================================
+
+# --- Product category catalog (language-neutral) ---
+
+[[products]]
+id = "precision-castings"
+category = "Precision Castings"
+material_family = "Engineering Alloys"
+material_grades = ["Alloy A", "Alloy B", "Alloy C"]
+alloy_designations = ["A", "B", "C"]
+sort_order = 1
+url_path = "/services/example-service/"
+
+[[products]]
+id = "machined-parts"
+category = "Machined Parts"
+material_family = "Engineering Alloys"
+material_grades = ["Alloy A", "Alloy B"]
+alloy_designations = ["A", "B"]
+sort_order = 2
+url_path = "/materials/example-material/"
+
+# --- Localized product descriptions ---
+
+[en.precision-castings]
+name = "Precision Castings"
+description = "Custom precision cast components in a range of engineering alloys for demanding industrial applications."
+key_properties = "Dimensional accuracy, excellent surface finish, complex geometry capability"
+
+[en.machined-parts]
+name = "Machined Parts"
+description = "Precision machined components with tight tolerances for functional and mating surfaces."
+key_properties = "Tight tolerances, excellent surface finish, complex geometry capability"
+
+[de.precision-castings]
+name = "Präzisionsgussteile"
+description = "Kundenspezifische Präzisionsgussteile aus Engineering-Legierungen für anspruchsvolle Industrieanwendungen."
+key_properties = "Maßgenauigkeit, erstklassige Oberfläche, komplexe Geometrie"
+
+[de.machined-parts]
+name = "Bearbeitete Teile"
+description = "Präzise bearbeitete Komponenten mit engen Toleranzen für Funktionselemente."
+key_properties = "Toleranzen, erstklassige Oberfläche, komplexe Geometrie"
+
+[ja.precision-castings]
+name = "精密鋳造部品"
+description = "厳しい産業用途向けの各種エンジニアリング合金によるカスタム精密鋳造部品。"
+key_properties = "寸法精度、優れた表面仕上がり、複雑形状対応"
+
+[ja.machined-parts]
+name = "加工部品"
+description = "機能面・嵌合面に対して高精度な精密加工部品。"
+key_properties = "公差、優れた表面仕上がり、複雑形状対応"
+
+[fr.precision-castings]
+name = "Pièces moulées de précision"
+description = "Pièces moulées de précision sur mesure en alliages d'ingénierie pour applications industrielles."
+key_properties = "Précision dimensionnelle, excellente finition, géométrie complexe"
+
+[fr.machined-parts]
+name = "Pièces usinées"
+description = "Pièces usinées de précision avec tolérances serrées pour surfaces fonctionnelles."
+key_properties = "Tolérances, excellente finition, géométrie complexe"
+
+[es.precision-castings]
+name = "Piezas fundidas de precisión"
+description = "Piezas fundidas de precisión a medida en aleaciones de ingeniería para aplicaciones industriales."
+key_properties = "Precisión dimensional, excelente acabado, geometría compleja"
+
+[es.machined-parts]
+name = "Piezas mecanizadas"
+description = "Piezas mecanizadas de precisión con tolerancias ajustadas para superficies funcionales."
+key_properties = "Tolerancias, excelente acabado, geometría compleja"

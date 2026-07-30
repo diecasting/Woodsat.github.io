@@ -1,0 +1,62 @@
+# ==========================================================================
+# params.toml — Industrial Manufacturer Template (SITE PARAMETERS)
+# ==========================================================================
+# >>> EDIT THIS FILE TO BRAND YOUR SITE. No layout changes required. <<<
+# Replace every placeholder value below with your company's information.
+# ==========================================================================
+
+# --- Brand identity (used in header, footer, schema, CTAs) ---
+companyName    = "Industrial Manufacturer"   # Site title + logo wordmark
+companyTagline = "Precision Manufacturing & Engineering"
+
+[branding]
+  logo       = ""        # Absolute or root-relative URL to your logo (PNG/SVG). Empty = text wordmark.
+  logo_mark  = ""        # 1-3 letter monogram shown in the header logo mark. Empty = first 2 letters of companyName.
+  logo_subtitle = ""     # Small text under the wordmark. Empty = companyTagline.
+
+# --- SEO defaults (overridable per page via front matter `seo`) ---
+description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
+keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
+
+[Author]
+  name = "Industrial Manufacturer"
+  email = "sales@example.com"
+
+# --- Contact (footer, RFQ form, schema, email fallback) ---
+[contact]
+  email = "sales@example.com"
+  phone = ""
+  address = ""
+  # RFQ form endpoint. Set this to your Formspree/HubSpot/etc. action URL.
+  # If LEFT EMPTY, the RFQ form is replaced by an email CTA (graceful fallback).
+  form_action = ""
+
+# --- Social (used in Organization schema `sameAs`) ---
+[social]
+  linkedin = ""
+  twitter = ""
+  youtube = ""
+
+# --- Feature flags ---
+[features]
+  enableSearch = false
+  enableBlog = false
+  enableRFQ = true
+  enableMultilingual = true
+
+# --- Homepage configuration ---
+[homepage]
+  showServices = true
+  showIndustries = true
+  showCertifications = true
+  showProcess = true
+
+# --- Footer ---
+[footer]
+  copyright = "Industrial Manufacturer. All rights reserved."
+  showLegalLinks = false
+
+# --- Conversion band (cta-band.html, before footer) ---
+[cta]
+  title = "Need Custom Manufactured Components?"
+  subtitle = "Send us your drawings and specifications — our engineering team reviews feasibility and replies with a quotation."

@@ -1,0 +1,17 @@
+{{- /* cta-band.html — Dark industrial conversion band before footer.
+   Rendered site-wide in baseof.html. Links to the RFQ form anchor. */ -}}
+{{- $href := "#rfq" -}}
+{{- if not .IsHome -}}
+  {{- $href = printf "%s#rfq" .Site.BaseURL -}}
+{{- end -}}
+<section class="cta-band" aria-labelledby="cta-band-title">
+  <div class="container cta-inner">
+    <div class="cta-text">
+      <h2 class="cta-title" id="cta-band-title">{{ .Site.Params.cta.title | default "Need Custom Manufactured Components?" }}</h2>
+      <p class="cta-sub">{{ .Site.Params.cta.subtitle | default "Send us your drawings and specifications — our engineering team reviews feasibility and replies with a quotation." }}</p>
+    </div>
+    <div class="cta-action">
+      <a href="{{ $href }}" class="btn btn-accent">Request A Quote</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+{{- /* sections/hero.html — Hero section (landing pages)
+   Premium industrial hero: breadcrumb, H1, intro, dual CTAs, optional image.
+   Used by layout: landing (homepage). Single pages render their own hero via single.html.
+   No content/SEO/schema changes. */ -}}
+{{- $lang := .Page.Language.Lang -}}
+{{- $org := hugo.Data.schema.organization -}}
+{{- $localized := index $org $lang -}}
+{{- $rfqHref := "#rfq" -}}
+{{- if not .IsHome -}}{{- $rfqHref = printf "%s#rfq" .Site.BaseURL -}}{{- end -}}
+<section class="section section-hero">
+  <div class="container hero-container">
+    {{ if not .IsHome }}{{ partial "breadcrumb.html" . }}{{ end }}
+    {{ with .Params.hero_eyebrow }}<span class="hero-eyebrow">{{ . }}</span>{{ end }}
+    <h1 class="hero-title">{{ .Title | default $localized.name }}</h1>
+    {{ with .Description }}<p class="hero-description">{{ . }}</p>{{ else }}{{ with $localized.slogan }}<p class="hero-description">{{ . }}</p>{{ end }}{{ end }}
+    <div class="hero-cta">
+      <a href="{{ $rfqHref }}" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:{{ .Site.Params.contact.email | default "sales@example.com" }}" class="btn btn-secondary">Contact Engineering Team</a>
+    </div>
+    {{ with .Params.hero_image }}<div class="hero-media"><img src="{{ . }}" alt="{{ $.Title }} — precision manufactured components" loading="lazy" decoding="async"></div>{{ end }}
+  </div>
+</section>

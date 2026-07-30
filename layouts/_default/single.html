@@ -1,0 +1,21 @@
+{{- /* single.html — Single page layout (service / material / industry / resource)
+   Renders a premium hero (H1, intro, dual CTAs, breadcrumb) then the page
+   body in a constrained 900px reading column. No content/SEO/schema changes. */ -}}
+{{ define "main" }}
+{{ partial "sections/hero.html" . }}
+<article class="article">
+  <div class="article-body prose">
+    {{ .Content }}
+  </div>
+
+  {{ if .Site.Taxonomies }}
+  <footer class="article-footer">
+    {{ with .Params.tags }}
+    <div class="article-tags">
+      {{ range . }}<span class="tag">{{ . }}</span>{{ end }}
+    </div>
+    {{ end }}
+  </footer>
+  {{ end }}
+</article>
+{{ end }}

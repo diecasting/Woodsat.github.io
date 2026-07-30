@@ -1,0 +1,64 @@
+# ==========================================================================
+# hugo.toml — Industrial Manufacturer Template (Multilingual Configuration)
+# ==========================================================================
+# >>> EDIT baseURL (and optionally title) for your site. <<<
+# Base content language: English (en) at site root.
+# Secondary languages served under language prefixes: /de/ /ja/ /fr/ /es/
+# All other branding lives in config/_default/params.toml.
+# ==========================================================================
+
+baseURL = "https://example.com/"
+locale = "en-US"
+title = "Industrial Manufacturer"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
+enableGitInfo = true
+enableMissingTranslationPlaceholders = false
+
+# Pagination
+paginate = 12
+
+# Output formats — HTML + RSS (home/section) + HTML (page).
+# Hugo generates /sitemap.xml (all languages) automatically.
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Minify configuration
+[minify]
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepComments = false
+    [minify.tdewolff.css]
+      precision = 0
+    [minify.tdewolff.js]
+      precision = 0
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+    noClasses = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+
+# RSS service limits
+[services]
+  [services.rss]
+    limit = 10

@@ -1,0 +1,13 @@
+{{- /* breadcrumb.html — Visual breadcrumb trail (layout only, no schema impact)
+   Built from .Section and .Title. Does NOT emit JSON-LD. */ -}}
+{{- if not .IsHome -}}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ .Site.BaseURL }}">Home</a></li>
+    {{- with .Section -}}
+    <li><span class="sep" aria-hidden="true">/</span><span>{{ . | humanize | title }}</span></li>
+    {{- end -}}
+    <li><span class="sep" aria-hidden="true">/</span><span aria-current="page">{{ .Title }}</span></li>
+  </ol>
+</nav>
+{{- end -}}

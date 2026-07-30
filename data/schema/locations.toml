@@ -1,0 +1,28 @@
+# ==========================================================================
+# locations.toml — Physical Facility Locations [SITE LAYER]
+# ==========================================================================
+# CUSTOMIZE: Add your manufacturing facility locations.
+# Feeds Place schema with GeoCoordinates on homepage.
+# ==========================================================================
+
+# --- Language-neutral location data ---
+
+[[locations]]
+id = "main-facility"
+schema_type = "Place"
+address_locality = "City"
+address_region = "Province/State"
+address_country = "CN"
+address_country_iso = "CN"
+latitude = 23.0207
+longitude = 113.7518
+timezone = "Asia/Shanghai"
+facility_type = "Manufacturing Facility"
+url = "https://example.com/"
+
+# --- Localized fields ---
+
+[en.main-facility]
+name = "Main Manufacturing Facility"
+description = "Primary manufacturing facility for precision components and quality inspection."
+address_display = "City, Province, China"

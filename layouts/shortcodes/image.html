@@ -1,0 +1,37 @@
+{{- /* =========================================================================
+   image.html — Semantic figure/image shortcode for external WordPress images
+   ==========================================================================
+   Usage:
+   {{< image
+        src="/images/example-manufacturing.webp"
+        alt="..."
+        title="..."
+        caption="..."
+        width="1200" height="800" >}}
+
+   Renders:
+   <figure class="img-figure">
+     <img src="..." alt="..." title="..."
+          loading="lazy" decoding="async" [width] [height]>
+     [<figcaption>caption</figcaption>]
+   </figure>
+
+   - Supports local (static/images/...) or external image URLs.
+   - Always emits loading="lazy" + decoding="async" for performance.
+   - caption is optional; when present a <figcaption> is rendered.
+   - width/height are optional but recommended to prevent layout shift.
+   - The data-driven schema engine (layouts/partials/schema/*) is intentionally
+     NOT touched by this shortcode.
+   ========================================================================= */ -}}
+<figure class="img-figure">
+  <img src="{{ .Get "src" }}"
+       alt="{{ .Get "alt" }}"
+       title="{{ .Get "title" | default (.Get "alt") }}"
+       loading="lazy"
+       decoding="async"
+       {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+       {{- with .Get "height" }} height="{{ . }}"{{ end -}}>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . }}</figcaption>
+  {{- end }}
+</figure>

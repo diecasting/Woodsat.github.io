@@ -1,0 +1,41 @@
+# ==========================================================================
+# menus.en.toml — Industrial Manufacturer Template (English Navigation)
+# ==========================================================================
+# Edit labels/URLs here. The template renders this menu automatically;
+# no layout changes are required to restructure navigation.
+# ==========================================================================
+
+[[main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[main]]
+  name = "Services"
+  url = "/services/"
+  weight = 2
+
+[[main]]
+  name = "Materials"
+  url = "/materials/"
+  weight = 3
+
+[[main]]
+  name = "Industries"
+  url = "/industries/"
+  weight = 4
+
+[[main]]
+  name = "Processes"
+  url = "/processes/"
+  weight = 5
+
+[[main]]
+  name = "Resources"
+  url = "/resources/"
+  weight = 6
+
+[[main]]
+  name = "Contact"
+  url = "/contact/"
+  weight = 7

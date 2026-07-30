@@ -1,0 +1,38 @@
+# ==========================================================================
+# menus.fr.toml — Industrial Manufacturer Template (Français Navigation)
+# ==========================================================================
+
+[[main]]
+  name = "Accueil"
+  url = "/fr/"
+  weight = 1
+
+[[main]]
+  name = "Services"
+  url = "/fr/services/"
+  weight = 2
+
+[[main]]
+  name = "Matériaux"
+  url = "/fr/materials/"
+  weight = 3
+
+[[main]]
+  name = "Secteurs"
+  url = "/fr/industries/"
+  weight = 4
+
+[[main]]
+  name = "Procédés"
+  url = "/fr/processes/"
+  weight = 5
+
+[[main]]
+  name = "Ressources"
+  url = "/fr/resources/"
+  weight = 6
+
+[[main]]
+  name = "Contact"
+  url = "/fr/contact/"
+  weight = 7

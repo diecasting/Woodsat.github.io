@@ -1,0 +1,90 @@
+# ==========================================================================
+# services.toml — Service Catalog [SITE LAYER] (TEMPLATE EXAMPLE)
+# ==========================================================================
+# >>> EDIT / EXTEND with your services. <<<
+# url_path must match the content directory path so the schema engine
+# (layouts/partials/schema/render.html) emits Service JSON-LD automatically.
+# Add one [[services]] block + a [<lang>.<id>] map per language you support.
+# ==========================================================================
+
+# --- Service catalog (language-neutral IDs) ---
+
+[[services]]
+id = "example-service"
+schema_type = "Service"
+url_path = "/services/example-service/"
+sort_order = 1
+
+[[services]]
+id = "example-material"
+schema_type = "Service"
+url_path = "/materials/example-material/"
+sort_order = 2
+
+[[services]]
+id = "example-industry"
+schema_type = "Service"
+url_path = "/industries/example-industry/"
+sort_order = 3
+
+# --- Localized service names and descriptions ---
+
+[en.example-service]
+name = "Precision Casting Service"
+description = "Custom precision casting service producing complex, near-net-shape components with tight tolerances and excellent surface finish."
+
+[en.example-material]
+name = "Engineering Material Castings"
+description = "Cast components in a range of engineering materials, selected to match strength, corrosion and temperature requirements."
+
+[en.example-industry]
+name = "Industrial Components"
+description = "Manufactured components for demanding industrial applications, supplied with full quality documentation."
+
+[de.example-service]
+name = "Präzisionsguss-Service"
+description = "Kundenspezifischer Präzisionsguss komplexer, nahezu endkonturnaher Bauteile mit engen Toleranzen und erstklassiger Oberfläche."
+
+[de.example-material]
+name = "Guss aus Engineering-Werkstoffen"
+description = "Gussteile aus verschiedenen Engineering-Werkstoffen, abgestimmt auf Festigkeit, Korrosion und Temperatur."
+
+[de.example-industry]
+name = "Industriekomponenten"
+description = "Gefertigte Komponenten für anspruchsvolle Industrieanwendungen, geliefert mit vollständiger Qualitätsdokumentation."
+
+[ja.example-service]
+name = "精密鋳造サービス"
+description = "複雑なニアネットシェイプ部品を、高精度かつ優れた表面品質で製造するカスタム精密鋳造サービス。"
+
+[ja.example-material]
+name = "エンジニアリング材料の鋳造"
+description = "強度・耐食性・温度要件に合わせて選定した各種エンジニアリング材料の鋳造部品。"
+
+[ja.example-industry]
+name = "産業用コンポーネント"
+description = "厳しい産業用途向けの製造コンポーネント。完全な品質文書付きで出荷。"
+
+[fr.example-service]
+name = "Service de moulage de précision"
+description = "Service de moulage de précision sur mesure produisant des pièces complexes quasi finies avec des tolérances serrées."
+
+[fr.example-material]
+name = "Pièces moulées en matériaux d'ingénierie"
+description = "Pièces moulées dans une gamme de matériaux d'ingénierie, choisis selon résistance, corrosion et température."
+
+[fr.example-industry]
+name = "Composants industriels"
+description = "Composants manufacturés pour applications industrielles exigeantes, livrés avec documentation qualité complète."
+
+[es.example-service]
+name = "Servicio de fundición de precisión"
+description = "Servicio de fundición de precisión a medida que produce piezas complejas casi netas con tolerancias ajustadas."
+
+[es.example-material]
+name = "Piezas fundidas en materiales de ingeniería"
+description = "Piezas fundidas en diversos materiales de ingeniería, seleccionados según resistencia, corrosión y temperatura."
+
+[es.example-industry]
+name = "Componentes industriales"
+description = "Componentes fabricados para aplicaciones industriales exigentes, con documentación de calidad completa."

@@ -1,0 +1,32 @@
+# ==========================================================================
+# certifications.toml — Quality Certifications [SITE LAYER]
+# ==========================================================================
+# CUSTOMIZE: Add your quality certifications.
+# Feeds ManufacturingBusiness "certifications" field.
+# ==========================================================================
+
+# --- Certification catalog (language-neutral) ---
+
+[[certifications]]
+id = "iso-9001"
+code = "ISO 9001"
+sort_order = 1
+issue_authority = "International Organization for Standardization"
+url = "https://www.iso.org/standard/62085.html"
+
+[[certifications]]
+id = "iatf-16949"
+code = "IATF 16949"
+sort_order = 2
+issue_authority = "International Automotive Task Force"
+url = "https://www.iatfglobaloversight.org/"
+
+# --- Localized descriptions ---
+
+[en.iso-9001]
+name = "ISO 9001 Quality Management System"
+description = "International standard for quality management systems, ensuring consistent product quality and continuous improvement."
+
+[en.iatf-16949]
+name = "IATF 16949 Automotive Quality Management"
+description = "Automotive industry standard for quality management systems, specifying requirements for automotive production and service parts organizations."

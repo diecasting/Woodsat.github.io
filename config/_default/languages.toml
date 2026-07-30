@@ -1,0 +1,48 @@
+# ==========================================================================
+# languages.toml — Industrial Manufacturer Template (Multilingual Config)
+# ==========================================================================
+# Primary: English (en) at site root.
+# Secondary: German (de), Japanese (ja), French (fr), Spanish (es)
+# served under language prefixes. Each language reads matching
+# [en]/[de]/[ja]/[fr]/[es] sections from data/schema/*.toml.
+# ==========================================================================
+
+[en]
+  locale = "en-US"
+  label = "English"
+  weight = 1
+  title = "Industrial Manufacturer"
+  [en.params]
+    locale = "en_US"
+
+[de]
+  locale = "de-DE"
+  label = "Deutsch"
+  weight = 2
+  title = "Industrial Manufacturer"
+  [de.params]
+    locale = "de_DE"
+
+[ja]
+  locale = "ja-JP"
+  label = "日本語"
+  weight = 3
+  title = "Industrial Manufacturer"
+  [ja.params]
+    locale = "ja_JP"
+
+[fr]
+  locale = "fr-FR"
+  label = "Français"
+  weight = 4
+  title = "Industrial Manufacturer"
+  [fr.params]
+    locale = "fr_FR"
+
+[es]
+  locale = "es-ES"
+  label = "Español"
+  weight = 5
+  title = "Industrial Manufacturer"
+  [es.params]
+    locale = "es_ES"

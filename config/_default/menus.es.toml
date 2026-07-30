@@ -1,0 +1,38 @@
+# ==========================================================================
+# menus.es.toml — Industrial Manufacturer Template (Español Navigation)
+# ==========================================================================
+
+[[main]]
+  name = "Inicio"
+  url = "/es/"
+  weight = 1
+
+[[main]]
+  name = "Servicios"
+  url = "/es/services/"
+  weight = 2
+
+[[main]]
+  name = "Materiales"
+  url = "/es/materials/"
+  weight = 3
+
+[[main]]
+  name = "Sectores"
+  url = "/es/industries/"
+  weight = 4
+
+[[main]]
+  name = "Procesos"
+  url = "/es/processes/"
+  weight = 5
+
+[[main]]
+  name = "Recursos"
+  url = "/es/resources/"
+  weight = 6
+
+[[main]]
+  name = "Contacto"
+  url = "/es/contact/"
+  weight = 7

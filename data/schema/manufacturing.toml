@@ -1,0 +1,115 @@
+# ==========================================================================
+# manufacturing.toml — Manufacturing Capabilities [SITE LAYER] (TEMPLATE EXAMPLE)
+# ==========================================================================
+# Feeds ManufacturingBusiness "knowsAbout" and capabilities sections.
+# CUSTOMIZE: describe your process, equipment and materials.
+# ==========================================================================
+
+# --- Language-neutral equipment & process identifiers ---
+
+[equipment]
+key_equipment = [
+  "Pattern / Tooling Production",
+  "Shell Molding Line",
+  "Melting Furnaces",
+  "CNC Machining Centers",
+  "CMM Dimensional Inspection",
+  "Material Spectrometer"
+]
+
+[processes]
+core_processes = [
+  "pattern-making",
+  "shell-building",
+  "pouring",
+  "cnc-machining",
+  "surface-finishing",
+  "quality-inspection"
+]
+
+# --- Localized fields ---
+
+[en]
+knows_about = [
+  "Precision Casting Process",
+  "Lost Wax / Investment Casting for complex geometries",
+  "Precision CNC Machining of castings",
+  "Surface Finishing: polishing, passivation, blasting",
+  "Quality Assurance: CMM inspection, spectrometry, NDT"
+]
+capabilities_description = "Integrated manufacturing of precision components with in-house tooling, machining and quality control."
+materials_primary = ["Alloy A", "Alloy B", "Alloy C"]
+process_types = [
+  "Precision Casting",
+  "Pattern Production",
+  "CNC Machining",
+  "Surface Finishing & Passivation"
+]
+
+[de]
+knows_about = [
+  "Präzisionsgussverfahren",
+  "Wachsausschmelzverfahren für komplexe Geometrien",
+  "Präzise CNC-Bearbeitung von Gussteilen",
+  "Oberflächenveredelung: Polieren, Passivieren, Strahlen",
+  "Qualitätssicherung: CMM, Spektrometrie, ZfP"
+]
+capabilities_description = "Integrierte Fertigung von Präzisionsbauteilen mit eigenem Werkzeugbau, Bearbeitung und Qualitätskontrolle."
+materials_primary = ["Legierung A", "Legierung B", "Legierung C"]
+process_types = [
+  "Präzisionsguss",
+  "Modellherstellung",
+  "CNC-Bearbeitung",
+  "Oberflächenveredelung & Passivierung"
+]
+
+[ja]
+knows_about = [
+  "精密鋳造プロセス",
+  "複雑形状向けロストワックス鋳造",
+  "鋳物の精密CNC機械加工",
+  "表面処理：研磨・不動態化・ブラスト",
+  "品質保証：三次元測定・分光分析・非破壊検査"
+]
+capabilities_description = "自社金型・加工・品質管理によるプレシジョン部品の統合製造。"
+materials_primary = ["合金A", "合金B", "合金C"]
+process_types = [
+  "精密鋳造",
+  "パターン製作",
+  "精密CNC機械加工",
+  "表面処理・不動態化"
+]
+
+[fr]
+knows_about = [
+  "Procédé de moulage de précision",
+  "Moulage à la cire perdue pour géométries complexes",
+  "Usinage CNC de précision des pièces",
+  "Finition: polissage, passivation, grenaillage",
+  "Assurance qualité: MMT, spectrométrie, CND"
+]
+capabilities_description = "Fabrication intégrée de composants de précision avec outillage, usinage et contrôle qualité internes."
+materials_primary = ["Alliage A", "Alliage B", "Alliage C"]
+process_types = [
+  "Moulage de précision",
+  "Production de modèles",
+  "Usinage CNC",
+  "Finition & passivation"
+]
+
+[es]
+knows_about = [
+  "Proceso de fundición de precisión",
+  "Fundición a la cera perdida para geometrías complejas",
+  "Mecanizado CNC de precisión de piezas",
+  "Acabado: pulido, pasivado, granallado",
+  "Garantía de calidad: CMM, espectrometría, END"
+]
+capabilities_description = "Fabricación integrada de componentes de precisión con utillaje, mecanizado y control de calidad propios."
+materials_primary = ["Aleación A", "Aleación B", "Aleación C"]
+process_types = [
+  "Fundición de precisión",
+  "Producción de modelos",
+  "Mecanizado CNC",
+  "Acabado y pasivado"
+]
