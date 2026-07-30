@@ -1,27 +1,36 @@
 {{- /* schema/organization.html — Organization JSON-LD
-   Data source: data/schema/organization.toml
+   Data source: config/branding/schema.toml (brand identity) +
+                data/schema/organization.toml (multilingual marketing text)
    Called by: schema/render.html (homepage) */ -}}
 
 {{- $lang := .Page.Language.Lang -}}
 {{- $org := hugo.Data.schema.organization -}}
+{{- $schema := .Site.Params.schema -}}
 {{- $localized := index $org $lang -}}
+
+{{- /* sameAs: collect non-empty social profiles from config/branding/schema.toml */ -}}
+{{- $sa := slice -}}
+{{- with $schema.sameAs.linkedin }}{{ $sa = $sa | append . }}{{ end -}}
+{{- with $schema.sameAs.twitter }}{{ $sa = $sa | append . }}{{ end -}}
+{{- with $schema.sameAs.youtube }}{{ $sa = $sa | append . }}{{ end -}}
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "{{ printf "%s#organization" .Site.BaseURL | safeJS }}",
-  "name": "{{ $localized.name | default .Site.Params.companyName | safeJS }}",
-  "legalName": "{{ $org.identity.legal_name | default .Site.Params.companyName | safeJS }}",
-  "url": "{{ $org.identity.url | safeJS }}",
-  "logo": "{{ $org.identity.logo | default .Site.Params.branding.logo | absURL | safeJS }}",
-  {{ with $org.identity.images -}}
+  "name": "{{ $localized.name | default .Site.Params.company.name | safeJS }}",
+  "legalName": "{{ $schema.legalName | default $org.identity.legal_name | default .Site.Params.company.name | safeJS }}",
+  "url": "{{ $schema.url | default $org.identity.url | safeJS }}",
+  "logo": "{{ $schema.logo | default $org.identity.logo | default .Site.Params.company.branding.logo | absURL | safeJS }}",
+  {{- $imgs := $schema.images | default $org.identity.images -}}
+  {{- with $imgs -}}
   "image": [
     {{ range $i, $img := . -}}
     {{- if $i }}, {{ end -}}"{{ $img | absURL | safeJS }}"
     {{- end -}}
   ],
-  {{ end -}}
+  {{- end -}}
   "description": "{{ $localized.description | safeJS }}",
   {{ with $localized.keywords -}}
   "keywords": [
@@ -34,7 +43,7 @@
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "{{ .contact_type | safeJS }}",
-    "email": "{{ .email | default .Site.Params.contact.email | safeJS }}",
+    "email": "{{ .Site.Params.contact.email | default .email | safeJS }}",
     "availableLanguage": [
       {{ range $i, $l := .available_language -}}
       {{- if $i }}, {{ end -}}"{{ $l | safeJS }}"
@@ -58,10 +67,18 @@
   {{- end -}}
   "address": {
     "@type": "PostalAddress",
-    {{ with $org.identity.address_locality }}"addressLocality": "{{ . | safeJS }}",{{ end }}
-    {{ with $org.identity.address_region }}"addressRegion": "{{ . | safeJS }}",{{ end }}
-    {{ with $org.identity.address_country }}"addressCountry": "{{ . | safeJS }}"{{ end }}
+    {{ with $schema.addressLocality | default $org.identity.address_locality }}"addressLocality": "{{ . | safeJS }}",{{ end }}
+    {{ with $schema.addressRegion | default $org.identity.address_region }}"addressRegion": "{{ . | safeJS }}",{{ end }}
+    {{ with $schema.addressCountry | default $org.identity.address_country }}"addressCountry": "{{ . | safeJS }}"{{ end }}
   }
+  {{- if $sa -}}
+  ,
+  "sameAs": [
+    {{ range $i, $s := $sa -}}
+    {{- if $i }}, {{ end -}}"{{ $s | safeJS }}"
+    {{- end -}}
+  ]
+  {{- end -}}
   {{- with .Params.schema.mentions -}}
   ,
   "mentions": [

@@ -11,9 +11,9 @@ materials: ["Alloy A", "Alloy B", "Alloy C"]
 applications: ["Fluid handling", "Structural", "General industrial"]
 industries: ["Pump & Valve", "Marine", "Automotive"]
 internal_linking:
-  - "/services/example-service/"
+  - "/services/precision-casting/"
   - "/materials/example-material/"
-  - "/industries/example-industry/"
+  - "/industries/pump-valve/"
 seo:
   meta_title: "Engineering Material Castings — Alloy Selection | Industrial Manufacturer"
   meta_description: "Cast components in a range of engineering materials, selected to match strength, corrosion and temperature requirements."
@@ -64,7 +64,7 @@ Every order passes material verification, dimensional inspection and non-destruc
 
 Tell us your material grade, quantities and tolerances and we will return a quotation.
 
-- [Precision Casting Service](/services/example-service/)
-- [Industrial Components](/industries/example-industry/)
+- [Precision Casting Service](/services/precision-casting/)
+- [Industrial Components](/industries/pump-valve/)
 
 {{< rfq_form >}}

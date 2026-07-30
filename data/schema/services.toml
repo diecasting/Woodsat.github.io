@@ -1,5 +1,5 @@
 # ==========================================================================
-# services.toml — Service Catalog [SITE LAYER] (TEMPLATE EXAMPLE)
+# services.toml — Service Catalog [SITE LAYER] (PRODUCTION TEMPLATE V3)
 # ==========================================================================
 # >>> EDIT / EXTEND with your services. <<<
 # url_path must match the content directory path so the schema engine
@@ -10,81 +10,133 @@
 # --- Service catalog (language-neutral IDs) ---
 
 [[services]]
-id = "example-service"
+id = "precision-casting"
 schema_type = "Service"
-url_path = "/services/example-service/"
+url_path = "/services/precision-casting/"
 sort_order = 1
 
 [[services]]
-id = "example-material"
+id = "cnc-machining"
 schema_type = "Service"
-url_path = "/materials/example-material/"
+url_path = "/services/cnc-machining/"
 sort_order = 2
 
 [[services]]
-id = "example-industry"
+id = "sheet-metal-fabrication"
 schema_type = "Service"
-url_path = "/industries/example-industry/"
+url_path = "/services/sheet-metal-fabrication/"
 sort_order = 3
+
+[[services]]
+id = "surface-treatment"
+schema_type = "Service"
+url_path = "/services/surface-treatment/"
+sort_order = 4
+
+[[services]]
+id = "assembly-services"
+schema_type = "Service"
+url_path = "/services/assembly-services/"
+sort_order = 5
 
 # --- Localized service names and descriptions ---
 
-[en.example-service]
-name = "Precision Casting Service"
-description = "Custom precision casting service producing complex, near-net-shape components with tight tolerances and excellent surface finish."
+[en.precision-casting]
+name = "Precision Casting"
+description = "Investment and sand casting of complex, near-net-shape metal components with tight tolerances and excellent surface finish."
 
-[en.example-material]
-name = "Engineering Material Castings"
-description = "Cast components in a range of engineering materials, selected to match strength, corrosion and temperature requirements."
+[en.cnc-machining]
+name = "CNC Machining"
+description = "Multi-axis CNC milling and turning that brings cast and forged components to tight, repeatable tolerances."
 
-[en.example-industry]
-name = "Industrial Components"
-description = "Manufactured components for demanding industrial applications, supplied with full quality documentation."
+[en.sheet-metal-fabrication]
+name = "Sheet Metal Fabrication"
+description = "Laser cutting, bending and welding of sheet metal enclosures, brackets and structural parts."
 
-[de.example-service]
-name = "Präzisionsguss-Service"
-description = "Kundenspezifischer Präzisionsguss komplexer, nahezu endkonturnaher Bauteile mit engen Toleranzen und erstklassiger Oberfläche."
+[en.surface-treatment]
+name = "Surface Treatment & Finishing"
+description = "Passivation, anodizing, powder coating and plating to protect parts and meet appearance specifications."
 
-[de.example-material]
-name = "Guss aus Engineering-Werkstoffen"
-description = "Gussteile aus verschiedenen Engineering-Werkstoffen, abgestimmt auf Festigkeit, Korrosion und Temperatur."
+[en.assembly-services]
+name = "Assembly & Value-Added Services"
+description = "Sub-assembly, kitting, testing and packaging that deliver finished, inspection-ready modules."
 
-[de.example-industry]
-name = "Industriekomponenten"
-description = "Gefertigte Komponenten für anspruchsvolle Industrieanwendungen, geliefert mit vollständiger Qualitätsdokumentation."
+[de.precision-casting]
+name = "Präzisionsguss"
+description = "Investment- und Sandguss komplexer, nahezu endkonturnaher Metallbauteile mit engen Toleranzen und erstklassiger Oberfläche."
 
-[ja.example-service]
-name = "精密鋳造サービス"
-description = "複雑なニアネットシェイプ部品を、高精度かつ優れた表面品質で製造するカスタム精密鋳造サービス。"
+[de.cnc-machining]
+name = "CNC-Bearbeitung"
+description = "Mehrachsige CNC-Fräs- und Drehbearbeitung, die Guss- und Schmiedeteile auf engste, wiederholbare Toleranzen bringt."
 
-[ja.example-material]
-name = "エンジニアリング材料の鋳造"
-description = "強度・耐食性・温度要件に合わせて選定した各種エンジニアリング材料の鋳造部品。"
+[de.sheet-metal-fabrication]
+name = "Blechbearbeitung"
+description = "Laserschneiden, Biegen und Schweißen von Blechgehäusen, Halterungen und Strukturteilen."
 
-[ja.example-industry]
-name = "産業用コンポーネント"
-description = "厳しい産業用途向けの製造コンポーネント。完全な品質文書付きで出荷。"
+[de.surface-treatment]
+name = "Oberflächenbehandlung"
+description = "Passivieren, Eloxieren, Pulverbeschichten und Galvanisieren zum Korrosionsschutz und für Optik."
 
-[fr.example-service]
-name = "Service de moulage de précision"
-description = "Service de moulage de précision sur mesure produisant des pièces complexes quasi finies avec des tolérances serrées."
+[de.assembly-services]
+name = "Montage & Weiterverarbeitung"
+description = "Unterbaugruppen, Kitting, Prüfung und Verpackung fertiger, prüffähiger Module."
 
-[fr.example-material]
-name = "Pièces moulées en matériaux d'ingénierie"
-description = "Pièces moulées dans une gamme de matériaux d'ingénierie, choisis selon résistance, corrosion et température."
+[ja.precision-casting]
+name = "精密鋳造"
+description = "複雑なニアネットシェイプ金属部品のロストワックスおよび砂型鋳造。高精度かつ優れた表面品質。"
 
-[fr.example-industry]
-name = "Composants industriels"
-description = "Composants manufacturés pour applications industrielles exigeantes, livrés avec documentation qualité complète."
+[ja.cnc-machining]
+name = "CNC加工"
+description = "多軸CNCフライス・旋盤加工により、鋳造・鍛造部品を高精度で仕上げ。"
 
-[es.example-service]
-name = "Servicio de fundición de precisión"
-description = "Servicio de fundición de precisión a medida que produce piezas complejas casi netas con tolerancias ajustadas."
+[ja.sheet-metal-fabrication]
+name = "板金加工"
+description = "板金筐体・ブラケット・構造部品のレーザー切断・曲げ・溶接。"
 
-[es.example-material]
-name = "Piezas fundidas en materiales de ingeniería"
-description = "Piezas fundidas en diversos materiales de ingeniería, seleccionados según resistencia, corrosión y temperatura."
+[ja.surface-treatment]
+name = "表面処理・仕上げ"
+description = "耐食性と外観要件を満たすパッシベーション・陽極酸化・粉体塗装・めっき。"
 
-[es.example-industry]
-name = "Componentes industriales"
-description = "Componentes fabricados para aplicaciones industriales exigentes, con documentación de calidad completa."
+[ja.assembly-services]
+name = "組立・付加価値サービス"
+description = "検査完了品のサブアセンブリ・キッティング・試験・包装。"
+
+[fr.precision-casting]
+name = "Moulage de précision"
+description = "Fonderie de précision (cire perdue et sable) de pièces métalliques complexes quasi finies avec des tolérances serrées."
+
+[fr.cnc-machining]
+name = "Usinage CNC"
+description = "Usinage CNC multi-axes (fraisage et tournage) pour des tolérances serrées et répétables."
+
+[fr.sheet-metal-fabrication]
+name = "Tôlerie"
+description = "Découpe laser, pliage et soudure de coffrets, supports et pièces structurelles en tôle."
+
+[fr.surface-treatment]
+name = "Traitement de surface"
+description = "Passivation, anodisation, peinture poudre et galvanisation pour la protection et l'esthétique."
+
+[fr.assembly-services]
+name = "Assemblage & services à valeur ajoutée"
+description = "Sous-ensembles, kitting, tests et emballage de modules finis prêts au contrôle."
+
+[es.precision-casting]
+name = "Fundición de precisión"
+description = "Fundición de precisión (cera perdida y arena) de componentes metálicos complejos casi netos con tolerancias ajustadas."
+
+[es.cnc-machining]
+name = "Mecanizado CNC"
+description = "Mecanizado CNC multieje (fresado y torneado) con tolerancias ajustadas y repetibles."
+
+[es.sheet-metal-fabrication]
+name = "Carpintería metálica"
+description = "Corte por láser, plegado y soldadura de chasis, soportes y piezas estructurales."
+
+[es.surface-treatment]
+name = "Tratamiento de superficies"
+description = "Pasivado, anodizado, recubrimiento en polvo y galvanizado para protección y acabado."
+
+[es.assembly-services]
+name = "Montaje y servicios de valor añadido"
+description = "Subensamblaje, kitting, pruebas y embalaje de módulos terminados listos para inspección."

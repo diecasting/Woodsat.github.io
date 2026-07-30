@@ -1,11 +1,13 @@
 {{- /* schema/manufacturing.html — ManufacturingBusiness JSON-LD
-   Data source: organization.toml, manufacturing.toml, certifications.toml
+   Data source: config/branding/schema.toml (brand identity) +
+                data/schema/{organization,manufacturing,certifications}.toml
    Called by: schema/render.html (homepage) */ -}}
 
 {{- $lang := .Page.Language.Lang -}}
 {{- $org := hugo.Data.schema.organization -}}
 {{- $mfg := hugo.Data.schema.manufacturing -}}
 {{- $certs := hugo.Data.schema.certifications -}}
+{{- $schema := .Site.Params.schema -}}
 {{- $localized := index $org $lang -}}
 {{- $mfgLocalized := index $mfg $lang -}}
 
@@ -14,11 +16,12 @@
   "@context": "https://schema.org",
   "@type": "ManufacturingBusiness",
   "@id": "{{ printf "%s#manufacturing-business" .Site.BaseURL | safeJS }}",
-  "name": "{{ $localized.name | safeJS }}",
-  "legalName": "{{ $org.identity.legal_name | safeJS }}",
-  "url": "{{ $org.identity.url | safeJS }}",
-  "logo": "{{ $org.identity.logo | absURL | safeJS }}",
-  {{ with $org.identity.images -}}
+  "name": "{{ .Site.Params.company.name | default $localized.name | safeJS }}",
+  "legalName": "{{ $schema.legalName | default $org.identity.legal_name | safeJS }}",
+  "url": "{{ $schema.url | default $org.identity.url | safeJS }}",
+  "logo": "{{ $schema.logo | default $org.identity.logo | absURL | safeJS }}",
+  {{- $imgs := $schema.images | default $org.identity.images -}}
+  {{- with $imgs -}}
   "image": [
     {{ range $i, $img := . -}}
     {{- if $i }}, {{ end -}}"{{ $img | absURL | safeJS }}"
@@ -35,9 +38,9 @@
   {{ end -}}
   "address": {
     "@type": "PostalAddress",
-    {{ with $org.identity.address_locality }}"addressLocality": "{{ . | safeJS }}",{{ end }}
-    {{ with $org.identity.address_region }}"addressRegion": "{{ . | safeJS }}",{{ end }}
-    {{ with $org.identity.address_country }}"addressCountry": "{{ . | safeJS }}"{{ end }}
+    {{ with $schema.addressLocality | default $org.identity.address_locality }}"addressLocality": "{{ . | safeJS }}",{{ end }}
+    {{ with $schema.addressRegion | default $org.identity.address_region }}"addressRegion": "{{ . | safeJS }}",{{ end }}
+    {{ with $schema.addressCountry | default $org.identity.address_country }}"addressCountry": "{{ . | safeJS }}"{{ end }}
   }
   {{- with $mfgLocalized.knows_about -}}
   ,

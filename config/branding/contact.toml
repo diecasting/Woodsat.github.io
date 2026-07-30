@@ -1,0 +1,17 @@
+# ==========================================================================
+# contact.toml — Contact Details (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for contact details. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Templates read these values as .Site.Params.contact.*
+# ==========================================================================
+
+[params]
+[params.contact]
+  email = "sales@example.com"
+  phone = ""
+  address = ""
+
+  # RFQ form endpoint (Formspree / HubSpot / etc. action URL).
+  # If LEFT EMPTY, the RFQ form is replaced by an email CTA (graceful fallback).
+  form_action = ""

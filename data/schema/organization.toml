@@ -7,21 +7,9 @@
 # Brand name/email/logo also fall back to config/_default/params.toml.
 # ==========================================================================
 
-# --- Language-neutral fields (identical across all locales) ---
-
-[identity]
-legal_name = "Industrial Manufacturer"
-url = "https://example.com/"
-logo = ""   # Absolute or root-relative logo URL. Empty = no logo in schema.
-images = [
-  "/images/example-facility-1.webp",
-  "/images/example-facility-2.webp"
-]
-address_locality = ""
-address_region = ""
-address_country = "CN"
-contact_email = "sales@example.com"
-contact_phone = ""
+# --- Brand identity (legalName, logo, url, address, geo, sameAs, certs) ---
+# now lives in config/branding/schema.toml. This file keeps only the
+# multilingual marketing text rendered at the Organization level.
 
 # --- Multilingual metadata (rendered at Organization level) ---
 

@@ -1,45 +1,14 @@
 # ==========================================================================
 # params.toml — Industrial Manufacturer Template (SITE PARAMETERS)
 # ==========================================================================
-# >>> EDIT THIS FILE TO BRAND YOUR SITE. No layout changes required. <<<
-# Replace every placeholder value below with your company's information.
+# >>> BRAND IDENTITY LIVES IN config/branding/*.toml (company / contact /
+# seo / schema). Edit those files to brand your site. <<<
+# This file holds non-branded site behaviour only.
 # ==========================================================================
-
-# --- Brand identity (used in header, footer, schema, CTAs) ---
-companyName    = "Industrial Manufacturer"   # Site title + logo wordmark
-companyTagline = "Precision Manufacturing & Engineering"
-
-# --- SEO defaults (overridable per page via front matter `seo`) ---
-# IMPORTANT: these MUST stay at top level (above any [table] header) so they
-# resolve as .Site.Params.description / .Site.Params.keywords.
-# If placed after a [table] header, TOML nests them (e.g. branding.description)
-# and the site-wide fallback meta description breaks on taxonomy/term/non-EN pages.
-description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
-keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
-
-[branding]
-  logo       = ""        # Absolute or root-relative URL to your logo (PNG/SVG). Empty = text wordmark.
-  logo_mark  = ""        # 1-3 letter monogram shown in the header logo mark. Empty = first 2 letters of companyName.
-  logo_subtitle = ""     # Small text under the wordmark. Empty = companyTagline.
 
 [Author]
   name = "Industrial Manufacturer"
   email = "sales@example.com"
-
-# --- Contact (footer, RFQ form, schema, email fallback) ---
-[contact]
-  email = "sales@example.com"
-  phone = ""
-  address = ""
-  # RFQ form endpoint. Set this to your Formspree/HubSpot/etc. action URL.
-  # If LEFT EMPTY, the RFQ form is replaced by an email CTA (graceful fallback).
-  form_action = ""
-
-# --- Social (used in Organization schema `sameAs`) ---
-[social]
-  linkedin = ""
-  twitter = ""
-  youtube = ""
 
 # --- Feature flags ---
 [features]
@@ -64,3 +33,98 @@ keywords = ["precision casting", "CNC machining", "investment casting", "custom 
 [cta]
   title = "Need Custom Manufactured Components?"
   subtitle = "Send us your drawings and specifications — our engineering team reviews feasibility and replies with a quotation."
+
+# >>> BRANDING SYNC START (auto-generated from config/branding/*.toml; do not edit by hand) >>>
+
+# ==========================================================================
+# company.toml — Brand Identity (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# This is the SINGLE SOURCE OF TRUTH for brand identity.
+# It is merged into config/_default/params.toml by scripts/sync-branding.py
+# (run by scripts/init-site.sh locally and by the GitHub Actions workflow).
+# Hugo only auto-loads config/_default/params.toml, so the merge is required.
+# Templates read these values as .Site.Params.company.*
+# ==========================================================================
+
+[company]
+  name = "Industrial Manufacturer"
+  tagline = "Precision Manufacturing & Engineering"
+
+  [company.branding]
+    # Absolute or root-relative logo URL (PNG/SVG). Empty = text wordmark.
+    logo = ""
+    # 1-3 letter monogram shown in the header logo mark.
+    # Empty = first 2 letters of company.name.
+    logo_mark = ""
+    # Small text under the wordmark. Empty = company.tagline.
+    logo_subtitle = ""
+
+# ==========================================================================
+# contact.toml — Contact Details (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for contact details. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Templates read these values as .Site.Params.contact.*
+# ==========================================================================
+
+[contact]
+  email = "sales@example.com"
+  phone = ""
+  address = ""
+
+  # RFQ form endpoint (Formspree / HubSpot / etc. action URL).
+  # If LEFT EMPTY, the RFQ form is replaced by an email CTA (graceful fallback).
+  form_action = ""
+
+# ==========================================================================
+# seo.toml — Site-wide SEO Defaults (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for site-wide SEO defaults. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Templates read these values as .Site.Params.seo.*
+# Per-page front matter `description` / `seo` overrides these.
+# IMPORTANT: keep `description` inside [params.seo] so it resolves as
+# .Site.Params.seo.description (the site-wide meta-description fallback).
+# ==========================================================================
+
+[seo]
+  description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
+  keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
+
+# ==========================================================================
+# schema.toml — Brand Identity for Structured Data (EDIT THIS TO BRAND)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for brand identity in structured data. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Consumed by the schema engine (Organization, ManufacturingBusiness,
+# WebSite, Geo) as .Site.Params.schema.*
+# Multi-language marketing text (name/description/keywords) stays in
+# data/schema/organization.toml; this file holds brand identity only.
+# ==========================================================================
+
+[schema]
+  legalName = "Industrial Manufacturer"
+  url = "https://example.com/"
+  logo = ""   # Absolute or root-relative logo URL. Empty = no logo in schema.
+  images = ["/images/example-facility-1.webp", "/images/example-facility-2.webp"]
+
+  addressLocality = ""
+  addressRegion = ""
+  addressCountry = "CN"
+  contactEmail = "sales@example.com"
+  contactPhone = ""
+
+  # Geographic coordinates of the primary facility (used for Geo schema).
+  latitude = 0.0
+  longitude = 0.0
+
+  # Social / external profiles -> Organization schema `sameAs`.
+  [schema.sameAs]
+    linkedin = ""
+    twitter = ""
+    youtube = ""
+
+  # Certifications surfaced in ManufacturingBusiness schema.
+  certifications = ["ISO 9001", "IATF 16949"]
+
+# <<< BRANDING SYNC END <<<

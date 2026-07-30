@@ -32,4 +32,4 @@ Reach the Industrial Manufacturer team for quotes, engineering support and manuf
 - **Phone:** — *(set `params.contact.phone`)*
 - **Address:** — *(set `params.contact.address`)*
 
-You can also explore our [Precision Casting Service](/services/example-service/), [Engineering Material Castings](/materials/example-material/) and [Manufacturing Process](/processes/example-process/).
+You can also explore our [Precision Casting Service](/services/precision-casting/), [Engineering Material Castings](/materials/example-material/) and [Manufacturing Process](/processes/example-process/).

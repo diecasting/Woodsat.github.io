@@ -4,38 +4,62 @@ date: {{ .Date }}
 draft: true
 layout: "single"
 description: ""
-
-# Schema overrides (optional)
-# schema:
-#   about: "https://example.com/related-topic"
-#   mentions:
-#     - "Keyword 1"
-#     - "Keyword 2"
-
-# Service-specific front matter (optional)
-# service_id: "your-service-id"  # Must match data/schema/services.toml
+tags: []
+categories: ["Services"]
+service: "{{ replace .Name "-" " " | title }}"
+materials: []
+applications: []
+industries: []
+internal_linking: []
+seo:
+  meta_title: ""
+  meta_description: ""
+  keywords: []
+schema:
+  faq:
+    - question: "What does {{ replace .Name "-" " " | title }} involve?"
+      answer: "Describe the service, the processes used and the value it provides to customers."
+    - question: "Which materials and capabilities are involved?"
+      answer: "List the materials, equipment and capabilities that define this service."
+    - question: "How do I request a quote?"
+      answer: "Send your drawings, material grade, quantities and tolerances via the quote form or to our sales email."
 ---
 
 ## Overview
 
-Brief description of this service.
+Brief introduction to this service and the problems it solves.
 
-## Capabilities
+## Manufacturing Capability
 
-- Capability 1
-- Capability 2
-- Capability 3
+| Stage | Capability |
+|-------|-----------|
+| Step 1 | ... |
+| Step 2 | ... |
+| Step 3 | ... |
 
-## Materials
+## Production Process
 
-| Material | Grade | Properties |
-|----------|-------|------------|
-| Example  | EX-1  | High strength |
+{{< process_flow
+  step1="Step 1"
+  step2="Step 2"
+  step3="Step 3"
+  step4="Step 4"
+  step5="Step 5"
+  step6="Step 6"
+>}}
 
-## Quality Assurance
+## Material Options
 
-Description of quality control processes.
+| Grade | Key properties | Typical use |
+|-------|----------------|-------------|
+| Example | Property | Application |
 
-## Get a Quote
+## Quality Control
+
+1. Incoming verification.
+2. In-process checks.
+3. Final inspection and traceability.
+
+## Request a Quote
 
 {{< rfq_form >}}

@@ -13,6 +13,12 @@ set -euo pipefail
 FRAMEWORK_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$FRAMEWORK_DIR"
 
+# NOTE: Brand identity lives in config/branding/*.toml (the single source of
+# truth). Those files are merged into config/_default/params.toml by
+# scripts/sync-branding.py at the end of this script and automatically in the
+# GitHub Actions workflow. params.toml is the only config file Hugo reads for
+# custom [params.*] values.
+
 echo "============================================"
 echo "  Industrial Hugo SEO Framework"
 echo "  Site Initialization Wizard"
@@ -70,20 +76,24 @@ sed -i.bak "s|baseURL = \"https://example.com/\"|baseURL = \"$WEBSITE_URL\"|" co
 sed -i.bak "s|title = \"Industrial Manufacturing Framework\"|title = \"$COMPANY_NAME\"|" config/_default/hugo.toml
 rm -f config/_default/hugo.toml.bak
 
-# --- Update params.toml ---
-sed -i.bak "s|name = \"Your Company Name\"|name = \"$COMPANY_NAME\"|" config/_default/params.toml
-sed -i.bak "s|email = \"contact@example.com\"|email = \"$EMAIL\"|g" config/_default/params.toml
-sed -i.bak "s|copyright = \"Your Company Name. All rights reserved.\"|copyright = \"$COMPANY_NAME. All rights reserved.\"|" config/_default/params.toml
-rm -f config/_default/params.toml.bak
+# --- Update branding config (config/branding/*.toml) ---
+sed -i.bak "s|name = \"Industrial Manufacturer\"|name = \"$COMPANY_NAME\"|" config/branding/company.toml
+sed -i.bak "s|email = \"sales@example.com\"|email = \"$EMAIL\"|g" config/branding/contact.toml
+sed -i.bak "s|copyright = \"Industrial Manufacturer. All rights reserved.\"|copyright = \"$COMPANY_NAME. All rights reserved.\"|" config/_default/params.toml
+rm -f config/_default/params.toml.bak config/branding/company.toml.bak config/branding/contact.toml.bak
 
-# --- Update organization.toml ---
-sed -i.bak "s|legal_name = \"Example Manufacturing Co., Ltd.\"|legal_name = \"$COMPANY_NAME\"|" data/schema/organization.toml
-sed -i.bak "s|url = \"https://example.com/\"|url = \"$WEBSITE_URL\"|" data/schema/organization.toml
-sed -i.bak "s|name = \"Example Manufacturing\"|name = \"$COMPANY_NAME\"|" data/schema/organization.toml
-sed -i.bak "s|contact_email = \"contact@example.com\"|contact_email = \"$EMAIL\"|" data/schema/organization.toml
-sed -i.bak "s|address_locality = \"City\"|address_locality = \"$CITY\"|" data/schema/organization.toml
-sed -i.bak "s|address_region = \"Province/State\"|address_region = \"$REGION\"|" data/schema/organization.toml
-sed -i.bak "s|address_country = \"CN\"|address_country = \"$COUNTRY\"|" data/schema/organization.toml
+# --- Update brand identity in config/branding/schema.toml ---
+sed -i.bak "s|legalName = \"Industrial Manufacturer\"|legalName = \"$COMPANY_NAME\"|" config/branding/schema.toml
+sed -i.bak "s|url = \"https://example.com/\"|url = \"$WEBSITE_URL\"|" config/branding/schema.toml
+sed -i.bak "s|contactEmail = \"sales@example.com\"|contactEmail = \"$EMAIL\"|" config/branding/schema.toml
+sed -i.bak "s|addressLocality = \"\"|addressLocality = \"$CITY\"|" config/branding/schema.toml
+sed -i.bak "s|addressRegion = \"\"|addressRegion = \"$REGION\"|" config/branding/schema.toml
+sed -i.bak "s|addressCountry = \"CN\"|addressCountry = \"$COUNTRY\"|" config/branding/schema.toml
+rm -f config/branding/schema.toml.bak
+
+# --- Update multilingual brand name in data/schema/organization.toml ---
+sed -i.bak "s|name = \"Industrial Manufacturer\"|name = \"$COMPANY_NAME\"|g" data/schema/organization.toml
+sed -i.bak "s|site_title = \"Industrial Manufacturer\"|site_title = \"$COMPANY_NAME\"|g" data/schema/organization.toml
 rm -f data/schema/organization.toml.bak
 
 # --- Update locations.toml ---
@@ -92,6 +102,9 @@ sed -i.bak "s|address_region = \"Province/State\"|address_region = \"$REGION\"|"
 sed -i.bak "s|address_country = \"CN\"|address_country = \"$COUNTRY\"|" data/schema/locations.toml
 sed -i.bak "s|url = \"https://example.com/\"|url = \"$WEBSITE_URL\"|" data/schema/locations.toml
 rm -f data/schema/locations.toml.bak
+
+# --- Sync branding into config/_default/params.toml (Hugo reads params.toml) ---
+python scripts/sync-branding.py
 
 echo ">>> Config files updated."
 

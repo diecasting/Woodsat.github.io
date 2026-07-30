@@ -1,0 +1,15 @@
+# ==========================================================================
+# seo.toml — Site-wide SEO Defaults (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for site-wide SEO defaults. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Templates read these values as .Site.Params.seo.*
+# Per-page front matter `description` / `seo` overrides these.
+# IMPORTANT: keep `description` inside [params.seo] so it resolves as
+# .Site.Params.seo.description (the site-wide meta-description fallback).
+# ==========================================================================
+
+[params]
+[params.seo]
+  description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
+  keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]

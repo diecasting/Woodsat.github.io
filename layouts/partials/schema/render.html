@@ -72,6 +72,12 @@
       {{- if gt (len $matchedProds) 0 -}}
         {{- $.Scratch.Set "schema_page_type" "product" -}}
         {{- $.Scratch.Set "schema_matched_product" (index $matchedProds 0).id -}}
+      {{- else -}}
+        {{- $matchedInds := where $industries.industries "url_path" $sectionPath -}}
+        {{- if gt (len $matchedInds) 0 -}}
+          {{- $.Scratch.Set "schema_page_type" "industry" -}}
+          {{- $.Scratch.Set "schema_matched_industry" (index $matchedInds 0).id -}}
+        {{- end -}}
       {{- end -}}
     {{- end -}}
 
@@ -86,6 +92,8 @@
     {{ partial "schema/service.html" . -}}
   {{- else if eq $pageType "product" -}}
     {{ partial "schema/product.html" . -}}
+  {{- else if eq $pageType "industry" -}}
+    {{ partial "schema/industry.html" . -}}
   {{- else -}}
     {{ partial "schema/article.html" . -}}
   {{- end -}}

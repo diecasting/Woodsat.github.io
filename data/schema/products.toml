@@ -14,7 +14,7 @@ material_family = "Engineering Alloys"
 material_grades = ["Alloy A", "Alloy B", "Alloy C"]
 alloy_designations = ["A", "B", "C"]
 sort_order = 1
-url_path = "/services/example-service/"
+url_path = "/services/precision-casting/"
 
 [[products]]
 id = "machined-parts"
@@ -23,7 +23,7 @@ material_family = "Engineering Alloys"
 material_grades = ["Alloy A", "Alloy B"]
 alloy_designations = ["A", "B"]
 sort_order = 2
-url_path = "/materials/example-material/"
+url_path = "/services/cnc-machining/"
 
 # --- Localized product descriptions ---
 

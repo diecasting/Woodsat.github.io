@@ -41,6 +41,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Sync branding config into params.toml
+        run: python scripts/sync-branding.py
+
       - name: Build with Hugo
         run: hugo --environment production --gc --minify
 

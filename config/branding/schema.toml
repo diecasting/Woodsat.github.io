@@ -1,0 +1,36 @@
+# ==========================================================================
+# schema.toml — Brand Identity for Structured Data (EDIT THIS TO BRAND)
+# ==========================================================================
+# SINGLE SOURCE OF TRUTH for brand identity in structured data. Merged into
+# config/_default/params.toml by scripts/sync-branding.py.
+# Consumed by the schema engine (Organization, ManufacturingBusiness,
+# WebSite, Geo) as .Site.Params.schema.*
+# Multi-language marketing text (name/description/keywords) stays in
+# data/schema/organization.toml; this file holds brand identity only.
+# ==========================================================================
+
+[params]
+[params.schema]
+  legalName = "Industrial Manufacturer"
+  url = "https://example.com/"
+  logo = ""   # Absolute or root-relative logo URL. Empty = no logo in schema.
+  images = ["/images/example-facility-1.webp", "/images/example-facility-2.webp"]
+
+  addressLocality = ""
+  addressRegion = ""
+  addressCountry = "CN"
+  contactEmail = "sales@example.com"
+  contactPhone = ""
+
+  # Geographic coordinates of the primary facility (used for Geo schema).
+  latitude = 0.0
+  longitude = 0.0
+
+  # Social / external profiles -> Organization schema `sameAs`.
+  [params.schema.sameAs]
+    linkedin = ""
+    twitter = ""
+    youtube = ""
+
+  # Certifications surfaced in ManufacturingBusiness schema.
+  certifications = ["ISO 9001", "IATF 16949"]

@@ -8,13 +8,14 @@
 <header class="site-header">
   <nav class="nav-container" aria-label="Primary">
     <a href="{{ .Site.BaseURL }}" class="nav-logo">
-      {{- $mark := .Site.Params.branding.logo_mark | default (substr (.Site.Params.companyName | default .Site.Title) 0 2 | upper) -}}
-      {{- with .Site.Params.branding.logo -}}
-      <img class="logo-img" src="{{ . | absURL }}" alt="{{ $.Site.Params.companyName | default .Site.Title }}" loading="lazy" decoding="async">
+      {{- $companyName := .Site.Params.company.name | default .Site.Title -}}
+      {{- $mark := .Site.Params.company.branding.logo_mark | default (substr $companyName 0 2 | upper) -}}
+      {{- with .Site.Params.company.branding.logo -}}
+      <img class="logo-img" src="{{ . | absURL }}" alt="{{ $companyName }}" loading="lazy" decoding="async">
       {{- else -}}
       <span class="logo-mark">{{ $mark }}</span>
       {{- end -}}
-      <span class="logo-text">{{ .Site.Params.companyName | default .Site.Title }}<small>{{ .Site.Params.branding.logo_subtitle | default .Site.Params.companyTagline }}</small></span>
+      <span class="logo-text">{{ $companyName }}<small>{{ .Site.Params.company.branding.logo_subtitle | default .Site.Params.company.tagline }}</small></span>
     </a>
 
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"

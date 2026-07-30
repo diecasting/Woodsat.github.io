@@ -9,7 +9,7 @@ categories: ["Resources"]
 service: "Casting Tolerance Guide"
 industries: ["Pump & Valve", "Automotive", "General industrial"]
 internal_linking:
-  - "/services/example-service/"
+  - "/services/precision-casting/"
   - "/processes/example-process/"
 seo:
   meta_title: "Casting Tolerance Guide — Specifying Dimensions | Industrial Manufacturer"
@@ -54,7 +54,7 @@ As-cast features are economical but hold wider limits. Features that must mate w
 
 Send your drawing with tolerances and we will return a feasibility review.
 
-- [Precision Casting Service](/services/example-service/)
+- [Precision Casting Service](/services/precision-casting/)
 - [Manufacturing Process](/processes/example-process/)
 
 {{< rfq_form >}}

@@ -1,0 +1,23 @@
+# ==========================================================================
+# company.toml — Brand Identity (EDIT THIS TO BRAND YOUR SITE)
+# ==========================================================================
+# This is the SINGLE SOURCE OF TRUTH for brand identity.
+# It is merged into config/_default/params.toml by scripts/sync-branding.py
+# (run by scripts/init-site.sh locally and by the GitHub Actions workflow).
+# Hugo only auto-loads config/_default/params.toml, so the merge is required.
+# Templates read these values as .Site.Params.company.*
+# ==========================================================================
+
+[params]
+[params.company]
+  name = "Industrial Manufacturer"
+  tagline = "Precision Manufacturing & Engineering"
+
+  [params.company.branding]
+    # Absolute or root-relative logo URL (PNG/SVG). Empty = text wordmark.
+    logo = ""
+    # 1-3 letter monogram shown in the header logo mark.
+    # Empty = first 2 letters of company.name.
+    logo_mark = ""
+    # Small text under the wordmark. Empty = company.tagline.
+    logo_subtitle = ""

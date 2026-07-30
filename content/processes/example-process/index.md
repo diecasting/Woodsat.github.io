@@ -10,7 +10,7 @@ service: "Manufacturing Process"
 applications: ["Prototype to production"]
 industries: ["Pump & Valve", "Marine", "Automotive"]
 internal_linking:
-  - "/services/example-service/"
+  - "/services/precision-casting/"
   - "/materials/example-material/"
 seo:
   meta_title: "Manufacturing Process — Pattern to Finished Part | Industrial Manufacturer"
@@ -63,7 +63,7 @@ Each step is documented against your specification: patterns are checked against
 
 Describe your part and we will return a feasibility review and quotation.
 
-- [Precision Casting Service](/services/example-service/)
+- [Precision Casting Service](/services/precision-casting/)
 - [Engineering Material Castings](/materials/example-material/)
 
 {{< rfq_form >}}
