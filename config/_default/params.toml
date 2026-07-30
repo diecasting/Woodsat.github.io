@@ -9,14 +9,18 @@
 companyName    = "Industrial Manufacturer"   # Site title + logo wordmark
 companyTagline = "Precision Manufacturing & Engineering"
 
+# --- SEO defaults (overridable per page via front matter `seo`) ---
+# IMPORTANT: these MUST stay at top level (above any [table] header) so they
+# resolve as .Site.Params.description / .Site.Params.keywords.
+# If placed after a [table] header, TOML nests them (e.g. branding.description)
+# and the site-wide fallback meta description breaks on taxonomy/term/non-EN pages.
+description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
+keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
+
 [branding]
   logo       = ""        # Absolute or root-relative URL to your logo (PNG/SVG). Empty = text wordmark.
   logo_mark  = ""        # 1-3 letter monogram shown in the header logo mark. Empty = first 2 letters of companyName.
   logo_subtitle = ""     # Small text under the wordmark. Empty = companyTagline.
-
-# --- SEO defaults (overridable per page via front matter `seo`) ---
-description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
-keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
 
 [Author]
   name = "Industrial Manufacturer"

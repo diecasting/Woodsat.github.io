@@ -1,7 +1,6 @@
 ---
 title: "Industrial Components | Industrial Manufacturer"
 description: "Industrial Manufacturer supplies manufactured components for demanding industrial applications, delivered with full quality documentation."
-translationKey: "example-industry"
 layout: "single"
 date: 2026-01-01
 draft: false

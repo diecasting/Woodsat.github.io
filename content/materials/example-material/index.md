@@ -1,7 +1,6 @@
 ---
 title: "Engineering Material Castings | Industrial Manufacturer"
 description: "Industrial Manufacturer casts components in a range of engineering materials, selected to match strength, corrosion and temperature requirements."
-translationKey: "example-material"
 layout: "single"
 date: 2026-01-01
 draft: false

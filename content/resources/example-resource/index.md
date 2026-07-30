@@ -1,7 +1,6 @@
 ---
 title: "Casting Tolerance Guide | Industrial Manufacturer"
 description: "A practical guide to casting tolerances, machining limits and how to specify dimensions for manufactured components."
-translationKey: "example-resource"
 layout: "single"
 date: 2026-01-01
 draft: false
@@ -43,6 +42,7 @@ As-cast features are economical but hold wider limits. Features that must mate w
   row3="Bore diameter,Turning,Tight limit"
   row4="Thread,Rolled/ cut,Standard series"
 >}}
+{{< /capability_table >}}
 
 ## Specifying Dimensions
 

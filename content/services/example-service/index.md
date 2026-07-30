@@ -1,7 +1,6 @@
 ---
 title: "Precision Casting Service | Industrial Manufacturer"
 description: "Industrial Manufacturer is a precision casting service provider building complex, near-net-shape components with tight tolerances and excellent surface finish."
-translationKey: "example-service"
 layout: "single"
 date: 2026-01-01
 draft: false

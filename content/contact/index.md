@@ -1,7 +1,6 @@
 ---
 title: "Contact Us | Industrial Manufacturer"
 description: "Contact Industrial Manufacturer for quotes, engineering support and manufacturing questions. Email, phone and address."
-translationKey: "contact"
 layout: "single"
 date: 2026-01-01
 draft: false

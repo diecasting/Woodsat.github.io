@@ -1,7 +1,6 @@
 ---
 title: "Manufacturing Process | Industrial Manufacturer"
 description: "Industrial Manufacturer's integrated manufacturing process: pattern making, shell building, pouring, machining, finishing and inspection."
-translationKey: "example-process"
 layout: "single"
 date: 2026-01-01
 draft: false
