@@ -63,17 +63,20 @@
   {{- with .File -}}
     {{- $dir := strings.TrimSuffix "/" (replace .Dir "\\" "/") -}}
     {{- $sectionPath := printf "/%s/" $dir -}}
-    {{- $matchedSvcs := where $services.services "url_path" $sectionPath -}}
+    {{- $matchedSvcs := slice -}}
+    {{- with $services -}}{{- $matchedSvcs = where .services "url_path" $sectionPath -}}{{- end -}}
     {{- if gt (len $matchedSvcs) 0 -}}
       {{- $.Scratch.Set "schema_page_type" "service" -}}
       {{- $.Scratch.Set "schema_matched_service" (index $matchedSvcs 0).id -}}
     {{- else -}}
-      {{- $matchedProds := where $products.products "url_path" $sectionPath -}}
+      {{- $matchedProds := slice -}}
+      {{- with $products -}}{{- $matchedProds = where .products "url_path" $sectionPath -}}{{- end -}}
       {{- if gt (len $matchedProds) 0 -}}
         {{- $.Scratch.Set "schema_page_type" "product" -}}
         {{- $.Scratch.Set "schema_matched_product" (index $matchedProds 0).id -}}
       {{- else -}}
-        {{- $matchedInds := where $industries.industries "url_path" $sectionPath -}}
+        {{- $matchedInds := slice -}}
+        {{- with $industries -}}{{- $matchedInds = where .industries "url_path" $sectionPath -}}{{- end -}}
         {{- if gt (len $matchedInds) 0 -}}
           {{- $.Scratch.Set "schema_page_type" "industry" -}}
           {{- $.Scratch.Set "schema_matched_industry" (index $matchedInds 0).id -}}
