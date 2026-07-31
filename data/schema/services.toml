@@ -454,3 +454,85 @@ description = "Enclos acoustiques en bois accordés pour un son propre, avec ren
 [es.acoustic-wood-speaker-enclosures]
 name = "Envolventes acústicas de madera"
 description = "Envolventes acústicas de madera afinadas para un sonido limpio, con refuerzo interno, amortiguación y puertos según los altavoces."
+
+# ---- Phase 1 SEO landing pages (EN only) ----
+
+[[services]]
+id = "oem-for-hifi-audio-brands"
+schema_type = "Service"
+url_path = "/oem-for-hifi-audio-brands/"
+sort_order = 10
+
+[en.oem-for-hifi-audio-brands]
+name = "OEM Speaker Cabinets for Hi-Fi Audio Brands"
+description = "Woodsat builds low-volume, high-finish OEM speaker cabinets for hi-fi and audiophile brands, with matched-pair veneer work, piano-lacquer finishing and confidential development."
+
+[[services]]
+id = "private-label-speaker-cabinet"
+schema_type = "Service"
+url_path = "/private-label-speaker-cabinet/"
+sort_order = 11
+
+[en.private-label-speaker-cabinet]
+name = "Private Label Speaker Cabinet Manufacturer (ODM)"
+description = "Woodsat develops and manufactures private-label and ODM speaker cabinets for distributors and retailers, delivering branded enclosures ready for retail packaging and resale."
+
+[[services]]
+id = "speaker-cabinet-contract-manufacturing"
+schema_type = "Service"
+url_path = "/speaker-cabinet-contract-manufacturing/"
+sort_order = 12
+
+[en.speaker-cabinet-contract-manufacturing]
+name = "Speaker Cabinet Contract Manufacturing"
+description = "Woodsat provides contract manufacturing for wooden speaker cabinets, from capacity planning and DFM through CNC machining, finishing, acoustic QC and protected pack-out."
+
+[[services]]
+id = "solid-wood-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/solid-wood-speaker-cabinet-manufacturer/"
+sort_order = 13
+
+[en.solid-wood-speaker-cabinet-manufacturer]
+name = "Solid Wood Speaker Cabinet Manufacturer"
+description = "Woodsat manufactures solid hardwood speaker cabinets in walnut, oak and maple, with joined, braced and damped construction for natural-wood acoustic enclosures."
+
+[[services]]
+id = "walnut-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/walnut-speaker-cabinet-manufacturer/"
+sort_order = 14
+
+[en.walnut-speaker-cabinet-manufacturer]
+name = "Walnut Speaker Cabinet Manufacturer"
+description = "Woodsat builds walnut speaker cabinets from solid stock and walnut-veneered panels, with book-matched grain, controlled finishing and repeatable matched output."
+
+[[services]]
+id = "birch-plywood-speaker-cabinet"
+schema_type = "Service"
+url_path = "/birch-plywood-speaker-cabinet/"
+sort_order = 15
+
+[en.birch-plywood-speaker-cabinet]
+name = "Birch Plywood Speaker Cabinet Manufacturer"
+description = "Woodsat manufactures Baltic birch plywood speaker cabinets with void-free stock, tear-out-free CNC edges and roadworthy joinery for portable and pro-audio use."
+
+[[services]]
+id = "studio-monitor-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/studio-monitor-cabinet-manufacturer/"
+sort_order = 16
+
+[en.studio-monitor-cabinet-manufacturer]
+name = "Studio Monitor Cabinet Manufacturer"
+description = "Woodsat builds inert studio monitor cabinets tuned for neutral, controlled monitoring, with braced, damped panels and tight driver and port tolerances."
+
+[[services]]
+id = "bookshelf-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/bookshelf-speaker-cabinet-manufacturer/"
+sort_order = 17
+
+[en.bookshelf-speaker-cabinet-manufacturer]
+name = "Bookshelf Speaker Cabinet Manufacturer"
+description = "Woodsat manufactures bookshelf and standmount speaker cabinets with space-efficient internal geometry, clean joinery and finishes suited to nearfield listening."
