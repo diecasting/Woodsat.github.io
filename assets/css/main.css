@@ -34,8 +34,8 @@
 
   /* Layout */
   --maxw: 1200px;
+  --header-h: 64px;
   --content-w: 900px;
-  --header-h: 72px;
 
   /* Fonts */
   --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -123,6 +123,14 @@ p { margin: 0 0 1.1rem; }
 }
 .logo-text { font-size: 1.15rem; letter-spacing: -.02em; }
 .logo-text small { display: block; font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.logo-img {
+  display: block;
+  height: auto;
+  max-height: 40px;          /* cap visual height, preserve aspect ratio (1.714) */
+  width: auto;
+  max-width: 200px;          /* guard against very wide marks */
+  object-fit: contain;       /* never crop or stretch */
+}
 
 .nav-menu { display: flex; list-style: none; gap: 4px; margin-left: auto; align-items: center; }
 .nav-item { position: relative; }
@@ -461,7 +469,8 @@ p { margin: 0 0 1.1rem; }
   .nav-cta { display: none; }
 }
 @media (max-width: 768px) {
-  :root { --header-h: 64px; }
+  :root { --header-h: 56px; }
+  .logo-img { max-height: 32px; }
   .nav-toggle { display: flex; order: 3; margin-left: 8px; }
   .lang-switcher { order: 2; margin-left: auto; }
   .lang-list { right: 0; left: auto; }
