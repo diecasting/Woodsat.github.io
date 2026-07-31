@@ -1,7 +1,11 @@
 {{- /* capability_table shortcode — Renders a capability table.
    Supports either named params (header + row1..row50) OR inner markdown table.
-   Uses .Get so it is safe whether .Params is a map or slice. */ -}}
-{{- $header := .Get "header" -}}
+   NOTE: `.Get` must be called on the shortcode context, so capture it in $sc
+   BEFORE the `range seq` loop — inside that range `.` is the integer index,
+   not the shortcode, and `.Get` would fail with "can't evaluate field Get
+   in type int". The same applies to $header above. */ -}}
+{{- $sc := . -}}
+{{- $header := $sc.Get "header" -}}
 {{- if $header -}}
 <div class="table-wrap">
 <table class="capability-table">
@@ -13,7 +17,7 @@
   <tbody>
     {{- range seq 1 50 -}}
       {{- $rowKey := printf "row%d" . -}}
-      {{- $row := .Get $rowKey -}}
+      {{- $row := $sc.Get $rowKey -}}
       {{- if $row -}}
     <tr>
       {{ range (split $row ",") }}<td>{{ . | trim " " }}</td>{{ end }}
