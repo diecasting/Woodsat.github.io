@@ -1,0 +1,27 @@
+{{- /* language-switcher.html — EN/DE/JA/FR/ES switcher.
+
+     Links to the translated page when one exists (matched via translationKey),
+     otherwise falls back to that language's home page so the switcher is never
+     a dead end. Data-driven from hugo.Sites — no hard-coded URLs. */ -}}
+{{- $current := .Language.Lang -}}
+{{- $translations := dict -}}
+{{- range .Translations -}}
+  {{- $translations = merge $translations (dict .Language.Lang .Permalink) -}}
+{{- end -}}
+<div class="lang-switcher" aria-label="{{ i18n "language" | default "Language" }}">
+  <span class="lang-current" aria-hidden="true">{{ upper $current }}</span>
+  <ul class="lang-list">
+    {{- range hugo.Sites -}}
+      {{- $lang := .Language.Lang -}}
+      {{- $label := .Language.Label | default (upper $lang) -}}
+      {{- $href := index $translations $lang | default .Home.Permalink -}}
+    <li class="lang-item{{ if eq $lang $current }} is-active{{ end }}">
+      {{- if eq $lang $current -}}
+        <span aria-current="true" lang="{{ $lang }}">{{ $label }}</span>
+      {{- else -}}
+        <a href="{{ $href }}" hreflang="{{ $lang }}" lang="{{ $lang }}">{{ $label }}</a>
+      {{- end -}}
+    </li>
+    {{- end -}}
+  </ul>
+</div>

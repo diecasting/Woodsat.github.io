@@ -1,5 +1,5 @@
 # ==========================================================================
-# menus.de.toml — Industrial Manufacturer Template (Deutsch Navigation)
+# menus.de.toml — Woodsat Deutsche Navigation
 # ==========================================================================
 
 [[main]]
@@ -8,31 +8,76 @@
   weight = 1
 
 [[main]]
-  name = "Leistungen"
-  url = "/de/services/"
+  name = "Lautsprechergehäuse"
+  identifier = "cabinets"
+  url = "/de/custom-wooden-speaker-cabinet-manufacturer/"
   weight = 2
 
 [[main]]
-  name = "Werkstoffe"
-  url = "/de/materials/"
+  name = "Maßgefertigte Holz-Lautsprechergehäuse"
+  url = "/de/custom-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 1
+
+[[main]]
+  name = "Holz-Lautsprechergehäuse"
+  url = "/de/wooden-speaker-enclosure-manufacturer/"
+  parent = "cabinets"
+  weight = 2
+
+[[main]]
+  name = "OEM Holz-Lautsprechergehäuse"
+  url = "/de/oem-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
   weight = 3
 
 [[main]]
-  name = "Branchen"
-  url = "/de/industries/"
+  name = "CNC-Bearbeitung für Lautsprechergehäuse"
+  url = "/de/speaker-cabinet-cnc-machining-service/"
+  parent = "cabinets"
   weight = 4
 
 [[main]]
-  name = "Prozesse"
-  url = "/de/processes/"
+  name = "Holz-Lautsprecherboxen"
+  url = "/de/wooden-speaker-box-manufacturer/"
+  parent = "cabinets"
   weight = 5
 
 [[main]]
-  name = "Ressourcen"
-  url = "/de/resources/"
+  name = "Leere Holz-Lautsprechergehäuse"
+  url = "/de/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+  parent = "cabinets"
   weight = 6
+
+[[main]]
+  name = "HiFi-Lautsprechergehäuse"
+  url = "/de/hifi-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 7
+
+[[main]]
+  name = "Lautsprechergehäuse-Fertigung"
+  url = "/de/speaker-cabinet-manufacturing/"
+  parent = "cabinets"
+  weight = 8
+
+[[main]]
+  name = "Akustische Holz-Lautsprechergehäuse"
+  url = "/de/acoustic-wood-speaker-enclosures/"
+  parent = "cabinets"
+  weight = 9
+
+[[main]]
+  name = "Ressourcen (EN)"
+  url = "/resources/"
+  weight = 3
+
+[[main]]
+  name = "Über uns"
+  url = "/de/about-us/"
+  weight = 4
 
 [[main]]
   name = "Kontakt"
   url = "/de/contact/"
-  weight = 7
+  weight = 5

@@ -24,3 +24,13 @@ config/staging/
 # Temporary files
 *.tmp
 *.bak
+
+# Scratch build output from local validation runs
+/public_detest/
+/_tmpbuild/
+/.es-check/
+/tmp/
+/hugo-out.txt
+
+# One-shot migration helper (content/<lang>/ -> index.<lang>.md), already applied
+/scripts/relang.py

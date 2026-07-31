@@ -7,7 +7,7 @@
    Only layout/styling; no content/SEO/schema changes. */ -}}
 <header class="site-header">
   <nav class="nav-container" aria-label="Primary">
-    <a href="{{ .Site.BaseURL }}" class="nav-logo">
+    <a href="{{ .Site.Home.Permalink }}" class="nav-logo">
       {{- $companyName := .Site.Params.company.name | default .Site.Title -}}
       {{- $mark := .Site.Params.company.branding.logo_mark | default (substr $companyName 0 2 | upper) -}}
       {{- with .Site.Params.company.branding.logo -}}
@@ -38,8 +38,10 @@
       {{ end }}
     </ul>
 
+    {{ partial "language-switcher.html" . }}
+
     {{- $quoteHref := "#rfq" -}}
-    {{- if not .IsHome -}}{{- $quoteHref = printf "%s#rfq" .Site.BaseURL -}}{{- end -}}
-    <a href="{{ $quoteHref }}" class="btn btn-primary btn-sm nav-cta">Get a Quote</a>
+    {{- if not .IsHome -}}{{- $quoteHref = printf "%s#rfq" .Site.Home.Permalink -}}{{- end -}}
+    <a href="{{ $quoteHref }}" class="btn btn-primary btn-sm nav-cta">{{ i18n "get_a_quote" | default "Get a Quote" }}</a>
   </nav>
 </header>

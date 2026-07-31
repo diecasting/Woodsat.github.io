@@ -5,11 +5,9 @@
 # config/_default/params.toml by scripts/sync-branding.py.
 # Templates read these values as .Site.Params.seo.*
 # Per-page front matter `description` / `seo` overrides these.
-# IMPORTANT: keep `description` inside [params.seo] so it resolves as
-# .Site.Params.seo.description (the site-wide meta-description fallback).
 # ==========================================================================
 
 [params]
 [params.seo]
-  description = "Industrial manufacturer providing precision casting, CNC machining and engineering components. Request a quote for custom manufactured parts."
-  keywords = ["precision casting", "CNC machining", "investment casting", "custom manufacturing", "engineering components"]
+  description = "Woodsat is a custom wooden speaker cabinet manufacturer providing OEM and ODM acoustic enclosure solutions, CNC wood routing, veneering and finishing for audio brands worldwide."
+  keywords = ["wooden speaker cabinet", "OEM speaker enclosure", "ODM speaker cabinet", "wood CNC machining", "acoustic enclosure", "speaker box manufacturer"]

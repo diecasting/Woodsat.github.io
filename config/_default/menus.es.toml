@@ -1,5 +1,5 @@
 # ==========================================================================
-# menus.es.toml — Industrial Manufacturer Template (Español Navigation)
+# menus.es.toml — Woodsat Navegación en Español
 # ==========================================================================
 
 [[main]]
@@ -8,31 +8,76 @@
   weight = 1
 
 [[main]]
-  name = "Servicios"
-  url = "/es/services/"
+  name = "Cajas acústicas de madera"
+  identifier = "cabinets"
+  url = "/es/custom-wooden-speaker-cabinet-manufacturer/"
   weight = 2
 
 [[main]]
-  name = "Materiales"
-  url = "/es/materials/"
+  name = "Fabricante de cajas acústicas de madera a medida"
+  url = "/es/custom-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 1
+
+[[main]]
+  name = "Fabricante de envolventes acústicas de madera"
+  url = "/es/wooden-speaker-enclosure-manufacturer/"
+  parent = "cabinets"
+  weight = 2
+
+[[main]]
+  name = "Fabricante OEM de cajas acústicas de madera"
+  url = "/es/oem-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
   weight = 3
 
 [[main]]
-  name = "Sectores"
-  url = "/es/industries/"
+  name = "Mecanizado CNC para cajas acústicas"
+  url = "/es/speaker-cabinet-cnc-machining-service/"
+  parent = "cabinets"
   weight = 4
 
 [[main]]
-  name = "Procesos"
-  url = "/es/processes/"
+  name = "Fabricante de cajas acústicas de madera"
+  url = "/es/wooden-speaker-box-manufacturer/"
+  parent = "cabinets"
   weight = 5
 
 [[main]]
-  name = "Recursos"
-  url = "/es/resources/"
+  name = "Fabricante de cajas acústicas de madera vacías a medida"
+  url = "/es/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+  parent = "cabinets"
   weight = 6
+
+[[main]]
+  name = "Fabricante de cajas acústicas HiFi"
+  url = "/es/hifi-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 7
+
+[[main]]
+  name = "Fabricación de cajas acústicas"
+  url = "/es/speaker-cabinet-manufacturing/"
+  parent = "cabinets"
+  weight = 8
+
+[[main]]
+  name = "Envolventes acústicas de madera"
+  url = "/es/acoustic-wood-speaker-enclosures/"
+  parent = "cabinets"
+  weight = 9
+
+[[main]]
+  name = "Recursos (EN)"
+  url = "/resources/"
+  weight = 3
+
+[[main]]
+  name = "Acerca de"
+  url = "/es/about-us/"
+  weight = 4
 
 [[main]]
   name = "Contacto"
   url = "/es/contact/"
-  weight = 7
+  weight = 5

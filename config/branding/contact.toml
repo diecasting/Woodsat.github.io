@@ -8,10 +8,12 @@
 
 [params]
 [params.contact]
-  email = "sales@example.com"
+  email = "jason@woodsat.com"
   phone = ""
   address = ""
 
-  # RFQ form endpoint (Formspree / HubSpot / etc. action URL).
-  # If LEFT EMPTY, the RFQ form is replaced by an email CTA (graceful fallback).
-  form_action = ""
+  # RFQ form endpoint (Formspree compatible). Create your form at
+  # https://formspree.io and replace REPLACE_WITH_FORM_ID with your real
+  # Formspree form ID. Submissions are emailed to jason@woodsat.com.
+  # If left empty, the template shows a graceful email CTA instead.
+  form_action = "https://formspree.io/f/REPLACE_WITH_FORM_ID"

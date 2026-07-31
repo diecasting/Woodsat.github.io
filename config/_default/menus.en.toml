@@ -1,8 +1,5 @@
 # ==========================================================================
-# menus.en.toml — Industrial Manufacturer Template (English Navigation)
-# ==========================================================================
-# Edit labels/URLs here. The template renders this menu automatically;
-# no layout changes are required to restructure navigation.
+# menus.en.toml — Woodsat English Navigation
 # ==========================================================================
 
 [[main]]
@@ -11,31 +8,76 @@
   weight = 1
 
 [[main]]
-  name = "Services"
-  url = "/services/"
+  name = "Speaker Cabinets"
+  identifier = "cabinets"
+  url = "/custom-wooden-speaker-cabinet-manufacturer/"
   weight = 2
 
 [[main]]
-  name = "Materials"
-  url = "/materials/"
+  name = "Custom Wooden Speaker Cabinet Manufacturer"
+  url = "/custom-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 1
+
+[[main]]
+  name = "Wooden Speaker Enclosure Manufacturer"
+  url = "/wooden-speaker-enclosure-manufacturer/"
+  parent = "cabinets"
+  weight = 2
+
+[[main]]
+  name = "OEM Wooden Speaker Cabinet Manufacturer"
+  url = "/oem-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
   weight = 3
 
 [[main]]
-  name = "Industries"
-  url = "/industries/"
+  name = "Speaker Cabinet CNC Machining Service"
+  url = "/speaker-cabinet-cnc-machining-service/"
+  parent = "cabinets"
   weight = 4
 
 [[main]]
-  name = "Processes"
-  url = "/processes/"
+  name = "Wooden Speaker Box Manufacturer"
+  url = "/wooden-speaker-box-manufacturer/"
+  parent = "cabinets"
   weight = 5
+
+[[main]]
+  name = "Custom Empty Wooden Speaker Cabinet Boxes"
+  url = "/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+  parent = "cabinets"
+  weight = 6
+
+[[main]]
+  name = "HiFi Speaker Cabinet Manufacturer"
+  url = "/hifi-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 7
+
+[[main]]
+  name = "Speaker Cabinet Manufacturing"
+  url = "/speaker-cabinet-manufacturing/"
+  parent = "cabinets"
+  weight = 8
+
+[[main]]
+  name = "Acoustic Wood Speaker Enclosures"
+  url = "/acoustic-wood-speaker-enclosures/"
+  parent = "cabinets"
+  weight = 9
 
 [[main]]
   name = "Resources"
   url = "/resources/"
-  weight = 6
+  weight = 3
+
+[[main]]
+  name = "About"
+  url = "/about-us/"
+  weight = 4
 
 [[main]]
   name = "Contact"
   url = "/contact/"
-  weight = 7
+  weight = 5

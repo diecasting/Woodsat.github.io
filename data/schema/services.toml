@@ -1,142 +1,456 @@
 # ==========================================================================
-# services.toml — Service Catalog [SITE LAYER] (PRODUCTION TEMPLATE V3)
+# services.toml — Service Catalog [SITE LAYER] (Woodsat)
 # ==========================================================================
-# >>> EDIT / EXTEND with your services. <<<
-# url_path must match the content directory path so the schema engine
-# (layouts/partials/schema/render.html) emits Service JSON-LD automatically.
-# Add one [[services]] block + a [<lang>.<id>] map per language you support.
+# url_path must match the content directory path (incl. language prefix for
+# translations) so schema/render.html emits a Service JSON-LD automatically.
 # ==========================================================================
-
-# --- Service catalog (language-neutral IDs) ---
 
 [[services]]
-id = "precision-casting"
+id = "custom-wooden-speaker-cabinet-manufacturer"
 schema_type = "Service"
-url_path = "/services/precision-casting/"
+url_path = "/custom-wooden-speaker-cabinet-manufacturer/"
 sort_order = 1
 
 [[services]]
-id = "cnc-machining"
+id = "custom-wooden-speaker-cabinet-manufacturer"
 schema_type = "Service"
-url_path = "/services/cnc-machining/"
+url_path = "/de/custom-wooden-speaker-cabinet-manufacturer/"
+sort_order = 1
+
+[[services]]
+id = "custom-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/ja/custom-wooden-speaker-cabinet-manufacturer/"
+sort_order = 1
+
+[[services]]
+id = "custom-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/fr/custom-wooden-speaker-cabinet-manufacturer/"
+sort_order = 1
+
+[[services]]
+id = "custom-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/es/custom-wooden-speaker-cabinet-manufacturer/"
+sort_order = 1
+
+[en.custom-wooden-speaker-cabinet-manufacturer]
+name = "Custom Wooden Speaker Cabinet Manufacturer"
+description = "Woodsat designs and builds custom wooden speaker cabinets and acoustic enclosures for audio brands, from prototype development to high-volume OEM and ODM production."
+
+[de.custom-wooden-speaker-cabinet-manufacturer]
+name = "Maßgefertigte Holz-Lautsprechergehäuse"
+description = "Woodsat entwickelt und fertigt maßgeschneiderte Holz-Lautsprechergehäuse und Akustikgehäuse für Audiomarken – von der Prototypenentwicklung bis zur OEM/ODM-Serienfertigung."
+
+[ja.custom-wooden-speaker-cabinet-manufacturer]
+name = "カスタム木製スピーカーキャビネット製造"
+description = "Woodsatはオーディオブランド向けに木製スピーカーキャビネットとアコースティックエンクロージャを設計・製造します。試作から大量OEM/ODM生産まで対応。"
+
+[fr.custom-wooden-speaker-cabinet-manufacturer]
+name = "Fabricant de coffrets acoustiques en bois sur mesure"
+description = "Woodsat conçoit et fabrique des coffrets acoustiques en bois sur mesure pour les marques audio, du prototype à la production OEM et ODM en grand volume."
+
+[es.custom-wooden-speaker-cabinet-manufacturer]
+name = "Fabricante de cajas acústicas de madera a medida"
+description = "Woodsat diseña y fabrica cajas acústicas de madera a medida para marcas de audio, desde el prototipo hasta la producción OEM y ODM en gran volumen."
+
+[[services]]
+id = "wooden-speaker-enclosure-manufacturer"
+schema_type = "Service"
+url_path = "/wooden-speaker-enclosure-manufacturer/"
 sort_order = 2
 
 [[services]]
-id = "sheet-metal-fabrication"
+id = "wooden-speaker-enclosure-manufacturer"
 schema_type = "Service"
-url_path = "/services/sheet-metal-fabrication/"
+url_path = "/de/wooden-speaker-enclosure-manufacturer/"
+sort_order = 2
+
+[[services]]
+id = "wooden-speaker-enclosure-manufacturer"
+schema_type = "Service"
+url_path = "/ja/wooden-speaker-enclosure-manufacturer/"
+sort_order = 2
+
+[[services]]
+id = "wooden-speaker-enclosure-manufacturer"
+schema_type = "Service"
+url_path = "/fr/wooden-speaker-enclosure-manufacturer/"
+sort_order = 2
+
+[[services]]
+id = "wooden-speaker-enclosure-manufacturer"
+schema_type = "Service"
+url_path = "/es/wooden-speaker-enclosure-manufacturer/"
+sort_order = 2
+
+[en.wooden-speaker-enclosure-manufacturer]
+name = "Wooden Speaker Enclosure Manufacturer"
+description = "Precision wooden speaker enclosures engineered for low resonance, accurate frequency response and premium appearance across hi-fi, studio and pro-audio applications."
+
+[de.wooden-speaker-enclosure-manufacturer]
+name = "Holz-Lautsprechergehäuse"
+description = "Präzise Holz-Lautsprechergehäuse für niedrige Resonanz, genaue Frequenzwiedergabe und hochwertiges Erscheinungsbild in HiFi-, Studio- und Pro-Audio-Anwendungen."
+
+[ja.wooden-speaker-enclosure-manufacturer]
+name = "木製スピーカーエンクロージャ製造"
+description = "ハイファイ、スタジオ、プロオーディオ向けに、低共振・正確な周波数特性・高級な外観を実現した精密木製スピーカーエンクロージャ。"
+
+[fr.wooden-speaker-enclosure-manufacturer]
+name = "Fabricant d'enclos acoustiques en bois"
+description = "Enclos acoustiques en bois de précision conçus pour une faible résonance, une réponse en fréquence précise et une apparence premium en HiFi, studio et pro-audio."
+
+[es.wooden-speaker-enclosure-manufacturer]
+name = "Fabricante de envolventes acústicas de madera"
+description = "Envolventes acústicas de madera de precisión para baja resonancia, respuesta de frecuencia precisa y acabado premium en HiFi, estudio y audio profesional."
+
+[[services]]
+id = "oem-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/oem-wooden-speaker-cabinet-manufacturer/"
 sort_order = 3
 
 [[services]]
-id = "surface-treatment"
+id = "oem-wooden-speaker-cabinet-manufacturer"
 schema_type = "Service"
-url_path = "/services/surface-treatment/"
+url_path = "/de/oem-wooden-speaker-cabinet-manufacturer/"
+sort_order = 3
+
+[[services]]
+id = "oem-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/ja/oem-wooden-speaker-cabinet-manufacturer/"
+sort_order = 3
+
+[[services]]
+id = "oem-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/fr/oem-wooden-speaker-cabinet-manufacturer/"
+sort_order = 3
+
+[[services]]
+id = "oem-wooden-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/es/oem-wooden-speaker-cabinet-manufacturer/"
+sort_order = 3
+
+[en.oem-wooden-speaker-cabinet-manufacturer]
+name = "OEM Wooden Speaker Cabinet Manufacturer"
+description = "Woodsat supports OEM and ODM speaker cabinet programs with confidential development, branding options, consistent quality and scalable mass production for audio equipment brands."
+
+[de.oem-wooden-speaker-cabinet-manufacturer]
+name = "OEM Holz-Lautsprechergehäuse"
+description = "Woodsat unterstützt OEM- und ODM-Programme mit vertraulicher Entwicklung, Markierungsoptionen, gleichbleibender Qualität und skalierbarer Serienfertigung."
+
+[ja.oem-wooden-speaker-cabinet-manufacturer]
+name = "OEM木製スピーカーキャビネット製造"
+description = "Woodsatは機密開発、ブランディング、一貫した品質、スケーラブルな量産でOEM/ODMスピーカーキャビネットを支援します。"
+
+[fr.oem-wooden-speaker-cabinet-manufacturer]
+name = "Fabricant OEM de coffrets acoustiques en bois"
+description = "Woodsat accompagne les programmes OEM et ODM avec un développement confidentiel, des options de marque, une qualité constante et une production en grande série."
+
+[es.oem-wooden-speaker-cabinet-manufacturer]
+name = "Fabricante OEM de cajas acústicas de madera"
+description = "Woodsat respalda programas OEM y ODM con desarrollo confidencial, opciones de marca, calidad constante y producción en masa escalable."
+
+[[services]]
+id = "speaker-cabinet-cnc-machining-service"
+schema_type = "Service"
+url_path = "/speaker-cabinet-cnc-machining-service/"
 sort_order = 4
 
 [[services]]
-id = "assembly-services"
+id = "speaker-cabinet-cnc-machining-service"
 schema_type = "Service"
-url_path = "/services/assembly-services/"
+url_path = "/de/speaker-cabinet-cnc-machining-service/"
+sort_order = 4
+
+[[services]]
+id = "speaker-cabinet-cnc-machining-service"
+schema_type = "Service"
+url_path = "/ja/speaker-cabinet-cnc-machining-service/"
+sort_order = 4
+
+[[services]]
+id = "speaker-cabinet-cnc-machining-service"
+schema_type = "Service"
+url_path = "/fr/speaker-cabinet-cnc-machining-service/"
+sort_order = 4
+
+[[services]]
+id = "speaker-cabinet-cnc-machining-service"
+schema_type = "Service"
+url_path = "/es/speaker-cabinet-cnc-machining-service/"
+sort_order = 4
+
+[en.speaker-cabinet-cnc-machining-service]
+name = "Speaker Cabinet CNC Machining Service"
+description = "Multi-axis CNC wood routing and machining for precise panels, baffles, ports and joinery that fit together cleanly and hold tight tolerances."
+
+[de.speaker-cabinet-cnc-machining-service]
+name = "CNC-Bearbeitung für Lautsprechergehäuse"
+description = "Mehrachsige CNC-Holzbearbeitung für präzise Panels, Schallwände, Ports und Verbindungen mit engen Toleranzen."
+
+[ja.speaker-cabinet-cnc-machining-service]
+name = "スピーカーキャビネットCNC加工サービス"
+description = "多軸CNC木工による高精度なパネル・バッフル・ポート・組接部の加工。公差を厳密に管理します。"
+
+[fr.speaker-cabinet-cnc-machining-service]
+name = "Usinage CNC pour coffrets acoustiques"
+description = "Usinage CNC multi-axes du bois pour panneaux, façades, évents et assemblages précis et aux tolérances serrées."
+
+[es.speaker-cabinet-cnc-machining-service]
+name = "Mecanizado CNC para cajas acústicas"
+description = "Mecanizado CNC multieje de madera para paneles, baffles, puertos y ensambles precisos con tolerancias ajustadas."
+
+[[services]]
+id = "wooden-speaker-box-manufacturer"
+schema_type = "Service"
+url_path = "/wooden-speaker-box-manufacturer/"
 sort_order = 5
 
-# --- Localized service names and descriptions ---
+[[services]]
+id = "wooden-speaker-box-manufacturer"
+schema_type = "Service"
+url_path = "/de/wooden-speaker-box-manufacturer/"
+sort_order = 5
 
-[en.precision-casting]
-name = "Precision Casting"
-description = "Investment and sand casting of complex, near-net-shape metal components with tight tolerances and excellent surface finish."
+[[services]]
+id = "wooden-speaker-box-manufacturer"
+schema_type = "Service"
+url_path = "/ja/wooden-speaker-box-manufacturer/"
+sort_order = 5
 
-[en.cnc-machining]
-name = "CNC Machining"
-description = "Multi-axis CNC milling and turning that brings cast and forged components to tight, repeatable tolerances."
+[[services]]
+id = "wooden-speaker-box-manufacturer"
+schema_type = "Service"
+url_path = "/fr/wooden-speaker-box-manufacturer/"
+sort_order = 5
 
-[en.sheet-metal-fabrication]
-name = "Sheet Metal Fabrication"
-description = "Laser cutting, bending and welding of sheet metal enclosures, brackets and structural parts."
+[[services]]
+id = "wooden-speaker-box-manufacturer"
+schema_type = "Service"
+url_path = "/es/wooden-speaker-box-manufacturer/"
+sort_order = 5
 
-[en.surface-treatment]
-name = "Surface Treatment & Finishing"
-description = "Passivation, anodizing, powder coating and plating to protect parts and meet appearance specifications."
+[en.wooden-speaker-box-manufacturer]
+name = "Wooden Speaker Box Manufacturer"
+description = "Durable wooden speaker boxes and cabinets produced with consistent panel accuracy, clean edges and a refined surface ready for veneer or paint."
 
-[en.assembly-services]
-name = "Assembly & Value-Added Services"
-description = "Sub-assembly, kitting, testing and packaging that deliver finished, inspection-ready modules."
+[de.wooden-speaker-box-manufacturer]
+name = "Holz-Lautsprecherboxen"
+description = "Langlebige Holz-Lautsprecherboxen mit gleichbleibender Panelgenauigkeit, sauberen Kanten und oberflächenfertig für Furnier oder Lack."
 
-[de.precision-casting]
-name = "Präzisionsguss"
-description = "Investment- und Sandguss komplexer, nahezu endkonturnaher Metallbauteile mit engen Toleranzen und erstklassiger Oberfläche."
+[ja.wooden-speaker-box-manufacturer]
+name = "木製スピーカーボックス製造"
+description = "面板精度・美しいエッジ・仕上げられた表面を持つ、耐久性のある木製スピーカーボックス。"
 
-[de.cnc-machining]
-name = "CNC-Bearbeitung"
-description = "Mehrachsige CNC-Fräs- und Drehbearbeitung, die Guss- und Schmiedeteile auf engste, wiederholbare Toleranzen bringt."
+[fr.wooden-speaker-box-manufacturer]
+name = "Fabricant de caisses acoustiques en bois"
+description = "Caisses acoustiques en bois durables à précision de panneau constante, arêtes nettes et surface prête pour le placage ou la peinture."
 
-[de.sheet-metal-fabrication]
-name = "Blechbearbeitung"
-description = "Laserschneiden, Biegen und Schweißen von Blechgehäusen, Halterungen und Strukturteilen."
+[es.wooden-speaker-box-manufacturer]
+name = "Fabricante de cajas acústicas de madera"
+description = "Cajas acústicas de madera duraderas con precisión de panel constante, bordes limpios y superficie lista para chapa o pintura."
 
-[de.surface-treatment]
-name = "Oberflächenbehandlung"
-description = "Passivieren, Eloxieren, Pulverbeschichten und Galvanisieren zum Korrosionsschutz und für Optik."
+[[services]]
+id = "custom-empty-wooden-speaker-cabinet-boxes-manufacturer"
+schema_type = "Service"
+url_path = "/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+sort_order = 6
 
-[de.assembly-services]
-name = "Montage & Weiterverarbeitung"
-description = "Unterbaugruppen, Kitting, Prüfung und Verpackung fertiger, prüffähiger Module."
+[[services]]
+id = "custom-empty-wooden-speaker-cabinet-boxes-manufacturer"
+schema_type = "Service"
+url_path = "/de/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+sort_order = 6
 
-[ja.precision-casting]
-name = "精密鋳造"
-description = "複雑なニアネットシェイプ金属部品のロストワックスおよび砂型鋳造。高精度かつ優れた表面品質。"
+[[services]]
+id = "custom-empty-wooden-speaker-cabinet-boxes-manufacturer"
+schema_type = "Service"
+url_path = "/ja/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+sort_order = 6
 
-[ja.cnc-machining]
-name = "CNC加工"
-description = "多軸CNCフライス・旋盤加工により、鋳造・鍛造部品を高精度で仕上げ。"
+[[services]]
+id = "custom-empty-wooden-speaker-cabinet-boxes-manufacturer"
+schema_type = "Service"
+url_path = "/fr/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+sort_order = 6
 
-[ja.sheet-metal-fabrication]
-name = "板金加工"
-description = "板金筐体・ブラケット・構造部品のレーザー切断・曲げ・溶接。"
+[[services]]
+id = "custom-empty-wooden-speaker-cabinet-boxes-manufacturer"
+schema_type = "Service"
+url_path = "/es/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+sort_order = 6
 
-[ja.surface-treatment]
-name = "表面処理・仕上げ"
-description = "耐食性と外観要件を満たすパッシベーション・陽極酸化・粉体塗装・めっき。"
+[en.custom-empty-wooden-speaker-cabinet-boxes-manufacturer]
+name = "Custom Empty Wooden Speaker Cabinet Boxes Manufacturer"
+description = "Bare wooden speaker cabinet boxes supplied unfinished or sealed, ready for your own drivers, crossover and branding."
 
-[ja.assembly-services]
-name = "組立・付加価値サービス"
-description = "検査完了品のサブアセンブリ・キッティング・試験・包装。"
+[de.custom-empty-wooden-speaker-cabinet-boxes-manufacturer]
+name = "Leere Holz-Lautsprechergehäuse"
+description = "Unlackierte oder grundierte leere Holz-Lautsprechergehäuse, bereit für eigene Chassis, Weichen und Markierung."
 
-[fr.precision-casting]
-name = "Moulage de précision"
-description = "Fonderie de précision (cire perdue et sable) de pièces métalliques complexes quasi finies avec des tolérances serrées."
+[ja.custom-empty-wooden-speaker-cabinet-boxes-manufacturer]
+name = "カスタム空木製スピーカーキャビネットボックス"
+description = "未塗装またはシーラー済みの空キャビネット。ご自身のユニット・ネットワーク・ブランディングにご使用いただけます。"
 
-[fr.cnc-machining]
-name = "Usinage CNC"
-description = "Usinage CNC multi-axes (fraisage et tournage) pour des tolérances serrées et répétables."
+[fr.custom-empty-wooden-speaker-cabinet-boxes-manufacturer]
+name = "Fabricant de coffrets acoustiques en bois vides sur mesure"
+description = "Coffrets acoustiques en bois vides, bruts ou imprimés, prêts pour vos haut-parleurs, filtres et marque."
 
-[fr.sheet-metal-fabrication]
-name = "Tôlerie"
-description = "Découpe laser, pliage et soudure de coffrets, supports et pièces structurelles en tôle."
+[es.custom-empty-wooden-speaker-cabinet-boxes-manufacturer]
+name = "Fabricante de cajas acústicas de madera vacías a medida"
+description = "Cajas acústicas de madera vacías, sin acabado o selladas, listas para tus propios altavoces, filtros y marca."
 
-[fr.surface-treatment]
-name = "Traitement de surface"
-description = "Passivation, anodisation, peinture poudre et galvanisation pour la protection et l'esthétique."
+[[services]]
+id = "hifi-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/hifi-speaker-cabinet-manufacturer/"
+sort_order = 7
 
-[fr.assembly-services]
-name = "Assemblage & services à valeur ajoutée"
-description = "Sous-ensembles, kitting, tests et emballage de modules finis prêts au contrôle."
+[[services]]
+id = "hifi-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/de/hifi-speaker-cabinet-manufacturer/"
+sort_order = 7
 
-[es.precision-casting]
-name = "Fundición de precisión"
-description = "Fundición de precisión (cera perdida y arena) de componentes metálicos complejos casi netos con tolerancias ajustadas."
+[[services]]
+id = "hifi-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/ja/hifi-speaker-cabinet-manufacturer/"
+sort_order = 7
 
-[es.cnc-machining]
-name = "Mecanizado CNC"
-description = "Mecanizado CNC multieje (fresado y torneado) con tolerancias ajustadas y repetibles."
+[[services]]
+id = "hifi-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/fr/hifi-speaker-cabinet-manufacturer/"
+sort_order = 7
 
-[es.sheet-metal-fabrication]
-name = "Carpintería metálica"
-description = "Corte por láser, plegado y soldadura de chasis, soportes y piezas estructurales."
+[[services]]
+id = "hifi-speaker-cabinet-manufacturer"
+schema_type = "Service"
+url_path = "/es/hifi-speaker-cabinet-manufacturer/"
+sort_order = 7
 
-[es.surface-treatment]
-name = "Tratamiento de superficies"
-description = "Pasivado, anodizado, recubrimiento en polvo y galvanizado para protección y acabado."
+[en.hifi-speaker-cabinet-manufacturer]
+name = "HiFi Speaker Cabinet Manufacturer"
+description = "High-fidelity speaker cabinets built for audiophile performance with damped panels, braced interiors and finishes that match reference-grade systems."
 
-[es.assembly-services]
-name = "Montaje y servicios de valor añadido"
-description = "Subensamblaje, kitting, pruebas y embalaje de módulos terminados listos para inspección."
+[de.hifi-speaker-cabinet-manufacturer]
+name = "HiFi-Lautsprechergehäuse"
+description = "Hochwertige Lautsprechergehäuse für audiophile Wiedergabe mit gedämpften Panels, versteiften Innenräumen und Referenz-Finish."
+
+[ja.hifi-speaker-cabinet-manufacturer]
+name = "HiFiスピーカーキャビネット製造"
+description = "制振パネル・補強構造・基準グレードの仕上げを備えた、オーディオフィル向け高 fidelityキャビネット。"
+
+[fr.hifi-speaker-cabinet-manufacturer]
+name = "Fabricant de coffrets HiFi"
+description = "Coffrets HiFi conçus pour la haute fidélité avec panneaux amortis, structure renforcée et finitions de référence."
+
+[es.hifi-speaker-cabinet-manufacturer]
+name = "Fabricante de cajas acústicas HiFi"
+description = "Cajas HiFi para alto rendimiento audiófilo con paneles amortiguados, refuerzo interior y acabados de referencia."
+
+[[services]]
+id = "speaker-cabinet-manufacturing"
+schema_type = "Service"
+url_path = "/speaker-cabinet-manufacturing/"
+sort_order = 8
+
+[[services]]
+id = "speaker-cabinet-manufacturing"
+schema_type = "Service"
+url_path = "/de/speaker-cabinet-manufacturing/"
+sort_order = 8
+
+[[services]]
+id = "speaker-cabinet-manufacturing"
+schema_type = "Service"
+url_path = "/ja/speaker-cabinet-manufacturing/"
+sort_order = 8
+
+[[services]]
+id = "speaker-cabinet-manufacturing"
+schema_type = "Service"
+url_path = "/fr/speaker-cabinet-manufacturing/"
+sort_order = 8
+
+[[services]]
+id = "speaker-cabinet-manufacturing"
+schema_type = "Service"
+url_path = "/es/speaker-cabinet-manufacturing/"
+sort_order = 8
+
+[en.speaker-cabinet-manufacturing]
+name = "Speaker Cabinet Manufacturing"
+description = "End-to-end wooden speaker cabinet manufacturing: engineering, CNC routing, veneering, finishing, acoustic QC and assembly under one roof."
+
+[de.speaker-cabinet-manufacturing]
+name = "Lautsprechergehäuse-Fertigung"
+description = "Komplettfertigung von Holz-Lautsprechergehäusen: Engineering, CNC, Furniere, Finish, Akustik-QC und Montage aus einer Hand."
+
+[ja.speaker-cabinet-manufacturing]
+name = "スピーカーキャビネット製造"
+description = "設計・CNC・突き板・仕上げ・音響QC・組立を一貫して行う木製スピーカーキャビネット製造。"
+
+[fr.speaker-cabinet-manufacturing]
+name = "Fabrication de coffrets acoustiques"
+description = "Fabrication complète de coffrets acoustiques en bois : ingénierie, CNC, placage, finition, QC acoustique et assemblage."
+
+[es.speaker-cabinet-manufacturing]
+name = "Fabricación de cajas acústicas"
+description = "Fabricación integral de cajas acústicas de madera: ingeniería, CNC, chapa, acabado, QC acústico y ensamblaje."
+
+[[services]]
+id = "acoustic-wood-speaker-enclosures"
+schema_type = "Service"
+url_path = "/acoustic-wood-speaker-enclosures/"
+sort_order = 9
+
+[[services]]
+id = "acoustic-wood-speaker-enclosures"
+schema_type = "Service"
+url_path = "/de/acoustic-wood-speaker-enclosures/"
+sort_order = 9
+
+[[services]]
+id = "acoustic-wood-speaker-enclosures"
+schema_type = "Service"
+url_path = "/ja/acoustic-wood-speaker-enclosures/"
+sort_order = 9
+
+[[services]]
+id = "acoustic-wood-speaker-enclosures"
+schema_type = "Service"
+url_path = "/fr/acoustic-wood-speaker-enclosures/"
+sort_order = 9
+
+[[services]]
+id = "acoustic-wood-speaker-enclosures"
+schema_type = "Service"
+url_path = "/es/acoustic-wood-speaker-enclosures/"
+sort_order = 9
+
+[en.acoustic-wood-speaker-enclosures]
+name = "Acoustic Wood Speaker Enclosures"
+description = "Wood acoustic enclosures tuned for clean, controlled sound with internal bracing, damping and port geometry matched to driver sets."
+
+[de.acoustic-wood-speaker-enclosures]
+name = "Akustische Holz-Lautsprechergehäuse"
+description = "Akustische Holzgehäuse mit Innenversteifung, Dämpfung und Portgeometrie, abgestimmt auf die Chassis."
+
+[ja.acoustic-wood-speaker-enclosures]
+name = "音響木製スピーカーエンクロージャ"
+description = "内部補強・制振・ポート形状をドライバーに合わせた、クリーンな音のための木製アコースティックエンクロージャ。"
+
+[fr.acoustic-wood-speaker-enclosures]
+name = "Enclos acoustiques en bois"
+description = "Enclos acoustiques en bois accordés pour un son propre, avec renfort interne, amortissement et géométrie d'évent adaptée."
+
+[es.acoustic-wood-speaker-enclosures]
+name = "Envolventes acústicas de madera"
+description = "Envolventes acústicas de madera afinadas para un sonido limpio, con refuerzo interno, amortiguación y puertos según los altavoces."

@@ -1,79 +1,117 @@
 # ==========================================================================
-# organization.toml — Organization Identity [SITE LAYER] (TEMPLATE PLACEHOLDER)
+# organization.toml — Organization Identity [SITE LAYER]
 # ==========================================================================
-# >>> EDIT THIS FILE with your company identity. <<<
-# Feeds Organization, ManufacturingBusiness, and WebSite schemas (JSON-LD is
-# generated automatically by layouts/partials/schema/*.html).
-# Brand name/email/logo also fall back to config/_default/params.toml.
+# Feeds Organization, ManufacturingBusiness, and WebSite schemas.
+# Brand name/email/logo fall back to config/branding/schema.toml.
+# Add industry / areaServed / knowsAbout (consumed by schema/organization.html).
 # ==========================================================================
-
-# --- Brand identity (legalName, logo, url, address, geo, sameAs, certs) ---
-# now lives in config/branding/schema.toml. This file keeps only the
-# multilingual marketing text rendered at the Organization level.
-
-# --- Multilingual metadata (rendered at Organization level) ---
 
 [en]
-name = "Industrial Manufacturer"
-description = "Industrial manufacturer providing precision casting, CNC machining and engineering components for industrial customers worldwide."
+name = "Woodsat"
+description = "Woodsat is a custom wooden speaker cabinet manufacturer providing OEM and ODM acoustic enclosure solutions, CNC wood routing, veneering and finishing for audio brands worldwide."
 keywords = [
-  "Precision Casting",
-  "CNC Machining",
-  "Investment Casting",
-  "Custom Manufacturing",
-  "Engineering Components"
+  "Wooden Speaker Cabinet Manufacturing",
+  "OEM Speaker Enclosures",
+  "CNC Wood Machining",
+  "Wood Veneer Finishing",
+  "Acoustic Products"
 ]
-site_title = "Industrial Manufacturer"
-slogan = "Precision Manufacturing & Engineering"
+site_title = "Woodsat"
+slogan = "Custom Wooden Speaker Cabinet Manufacturer"
+industry = "Audio Manufacturing"
+areaServed = "Worldwide"
+knowsAbout = [
+  "Wooden Speaker Cabinet Manufacturing",
+  "OEM Speaker Enclosures",
+  "CNC Wood Machining",
+  "Wood Veneer Finishing",
+  "Acoustic Products"
+]
 
 [de]
-name = "Industrial Manufacturer"
-description = "Industrieunternehmen für Präzisionsguss, CNC-Bearbeitung und Engineering-Bauteile für Kunden weltweit."
+name = "Woodsat"
+description = "Woodsat ist ein Hersteller von maßgefertigten Holz-Lautsprechergehäusen und bietet OEM- und ODM-Akustikgehäuse, CNC-Holzbearbeitung, Furnieren und Veredelung für Audiomarken weltweit."
 keywords = [
-  "Präzisionsguss",
-  "CNC-Bearbeitung",
-  "Investment Casting",
-  "Kundenfertigung",
-  "Engineering-Komponenten"
+  "Holz-Lautsprechergehäuse Fertigung",
+  "OEM Lautsprechergehäuse",
+  "CNC Holzbearbeitung",
+  "Holzfurniere",
+  "Akustikprodukte"
 ]
-site_title = "Industrial Manufacturer"
-slogan = "Präzisionsfertigung & Engineering"
+site_title = "Woodsat"
+slogan = "Hersteller von Holz-Lautsprechergehäusen"
+industry = "Audiofertigung"
+areaServed = "Weltweit"
+knowsAbout = [
+  "Holz-Lautsprechergehäuse Fertigung",
+  "OEM Lautsprechergehäuse",
+  "CNC Holzbearbeitung",
+  "Holzfurniere",
+  "Akustikprodukte"
+]
 
 [ja]
-name = "Industrial Manufacturer"
-description = "世界の産業顧客向けに、精密鋳造・CNC加工・エンジニアリング部品を提供する工業メーカー。"
+name = "Woodsat"
+description = "Woodsatは、世界中のオーディオブランド向けにOEM・ODMの木製スピーカーキャビネット、CNC木工、突き板貼り、仕上げを提供するカスタム木製スピーカーキャビネット製造メーカーです。"
 keywords = [
-  "精密鋳造",
-  "CNC加工",
-  "インベストメント鋳造",
-  "カスタム製造",
-  "エンジニアリング部品"
+  "木製スピーカーキャビネット製造",
+  "OEMスピーカーエンクロージャー",
+  "CNC木工",
+  "木目突き板",
+  "音響製品"
 ]
-site_title = "Industrial Manufacturer"
-slogan = "精密製造とエンジニアリング"
+site_title = "Woodsat"
+slogan = "カスタム木製スピーカーキャビネット製造"
+industry = "オーディオ製造"
+areaServed = "世界中"
+knowsAbout = [
+  "木製スピーカーキャビネット製造",
+  "OEMスピーカーエンクロージャー",
+  "CNC木工",
+  "木目突き板",
+  "音響製品"
+]
 
 [fr]
-name = "Industrial Manufacturer"
-description = "Fabricant industriel proposant la fonderie de précision, l'usinage CNC et des composants d'ingénierie pour les clients du monde entier."
+name = "Woodsat"
+description = "Woodsat est un fabricant de coffrets acoustiques en bois sur mesure proposant des solutions d'enceintes acoustiques OEM et ODM, l'usinage CNC du bois, le placage et le finissage pour les marques audio du monde entier."
 keywords = [
-  "Fonderie de précision",
-  "Usinage CNC",
-  "Moulage de précision",
-  "Fabrication sur mesure",
-  "Composants d'ingénierie"
+  "Fabrication de coffrets acoustiques en bois",
+  "Enclos acoustiques OEM",
+  "Usinage CNC du bois",
+  "Placage bois",
+  "Produits acoustiques"
 ]
-site_title = "Industrial Manufacturer"
-slogan = "Fabrication de précision & ingénierie"
+site_title = "Woodsat"
+slogan = "Fabricant de coffrets acoustiques en bois sur mesure"
+industry = "Fabrication audio"
+areaServed = "Monde entier"
+knowsAbout = [
+  "Fabrication de coffrets acoustiques en bois",
+  "Enclos acoustiques OEM",
+  "Usinage CNC du bois",
+  "Placage bois",
+  "Produits acoustiques"
+]
 
 [es]
-name = "Industrial Manufacturer"
-description = "Fabricante industrial que ofrece fundición de precisión, mecanizado CNC y componentes de ingeniería para clientes de todo el mundo."
+name = "Woodsat"
+description = "Woodsat es un fabricante de cajas acústicas de madera a medida que ofrece soluciones de envolventes acústicas OEM y ODM, mecanizado CNC de madera, chapa y acabado para marcas de audio de todo el mundo."
 keywords = [
-  "Fundición de precisión",
-  "Mecanizado CNC",
-  "Fundición a la cera perdida",
-  "Fabricación a medida",
-  "Componentes de ingeniería"
+  "Fabricación de cajas acústicas de madera",
+  "Envolventes acústicas OEM",
+  "Mecanizado CNC de madera",
+  "Chapa de madera",
+  "Productos acústicos"
 ]
-site_title = "Industrial Manufacturer"
-slogan = "Fabricación de precisión e ingeniería"
+site_title = "Woodsat"
+slogan = "Fabricante de cajas acústicas de madera a medida"
+industry = "Fabricación de audio"
+areaServed = "En todo el mundo"
+knowsAbout = [
+  "Fabricación de cajas acústicas de madera",
+  "Envolventes acústicas OEM",
+  "Mecanizado CNC de madera",
+  "Chapa de madera",
+  "Productos acústicos"
+]

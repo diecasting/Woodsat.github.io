@@ -11,7 +11,7 @@
   locale = "en-US"
   label = "English"
   weight = 1
-  title = "Industrial Manufacturer"
+  title = "Woodsat"
   [en.params]
     locale = "en_US"
 
@@ -19,7 +19,7 @@
   locale = "de-DE"
   label = "Deutsch"
   weight = 2
-  title = "Industrial Manufacturer"
+  title = "Woodsat"
   [de.params]
     locale = "de_DE"
 
@@ -27,7 +27,7 @@
   locale = "ja-JP"
   label = "日本語"
   weight = 3
-  title = "Industrial Manufacturer"
+  title = "Woodsat"
   [ja.params]
     locale = "ja_JP"
 
@@ -35,7 +35,7 @@
   locale = "fr-FR"
   label = "Français"
   weight = 4
-  title = "Industrial Manufacturer"
+  title = "Woodsat"
   [fr.params]
     locale = "fr_FR"
 
@@ -43,6 +43,6 @@
   locale = "es-ES"
   label = "Español"
   weight = 5
-  title = "Industrial Manufacturer"
+  title = "Woodsat"
   [es.params]
     locale = "es_ES"

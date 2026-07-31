@@ -7,14 +7,19 @@
 # All other branding lives in config/_default/params.toml.
 # ==========================================================================
 
-baseURL = "https://example.com/"
+baseURL = "https://diecasting.github.io/Woodsat.github.io/"
 locale = "en-US"
-title = "Industrial Manufacturer"
+title = "Woodsat"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 enableGitInfo = true
 enableMissingTranslationPlaceholders = false
+
+# baseURL contains a sub-path (GitHub project page). Root-relative links written
+# in markdown (e.g. /de/contact/) must be rewritten to include that sub-path,
+# otherwise every in-content link 404s. canonifyURLs handles this globally.
+canonifyURLs = true
 
 # Pagination
 paginate = 12

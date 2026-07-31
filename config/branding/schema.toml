@@ -11,15 +11,15 @@
 
 [params]
 [params.schema]
-  legalName = "Industrial Manufacturer"
-  url = "https://example.com/"
-  logo = ""   # Absolute or root-relative logo URL. Empty = no logo in schema.
-  images = ["/images/example-facility-1.webp", "/images/example-facility-2.webp"]
+  legalName = "Woodsat"
+  url = "https://woodsat.com/"
+  logo = "https://woodsat.com/wp-content/uploads/2023/08/Wood-audio-speaker-boxes.png"
+  images = ["https://woodsat.com/wp-content/uploads/2020/08/Empty-speaker-cabinet.jpg", "https://woodsat.com/wp-content/uploads/2023/02/Empty-Wooden-speaker-box-products.webp"]
 
   addressLocality = ""
   addressRegion = ""
   addressCountry = "CN"
-  contactEmail = "sales@example.com"
+  contactEmail = "jason@woodsat.com"
   contactPhone = ""
 
   # Geographic coordinates of the primary facility (used for Geo schema).
@@ -33,4 +33,4 @@
     youtube = ""
 
   # Certifications surfaced in ManufacturingBusiness schema.
-  certifications = ["ISO 9001", "IATF 16949"]
+  certifications = ["ISO 9001"]

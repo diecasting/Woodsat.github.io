@@ -53,6 +53,9 @@ jobs:
       - name: Run SEO Check
         run: python scripts/seo-check.py ./public
 
+      - name: Run Internal Link Check
+        run: python scripts/linkcheck.py ./public
+
       - name: Upload artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3

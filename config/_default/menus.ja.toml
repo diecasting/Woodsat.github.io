@@ -1,5 +1,5 @@
 # ==========================================================================
-# menus.ja.toml — Industrial Manufacturer Template (日本語 Navigation)
+# menus.ja.toml — Woodsat 日本語ナビゲーション
 # ==========================================================================
 
 [[main]]
@@ -8,31 +8,76 @@
   weight = 1
 
 [[main]]
-  name = "サービス"
-  url = "/ja/services/"
+  name = "スピーカーキャビネット"
+  identifier = "cabinets"
+  url = "/ja/custom-wooden-speaker-cabinet-manufacturer/"
   weight = 2
 
 [[main]]
-  name = "材料"
-  url = "/ja/materials/"
+  name = "カスタム木製スピーカーキャビネット製造"
+  url = "/ja/custom-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 1
+
+[[main]]
+  name = "木製スピーカーエンクロージャ製造"
+  url = "/ja/wooden-speaker-enclosure-manufacturer/"
+  parent = "cabinets"
+  weight = 2
+
+[[main]]
+  name = "OEM木製スピーカーキャビネット製造"
+  url = "/ja/oem-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
   weight = 3
 
 [[main]]
-  name = "業界"
-  url = "/ja/industries/"
+  name = "スピーカーキャビネットCNC加工サービス"
+  url = "/ja/speaker-cabinet-cnc-machining-service/"
+  parent = "cabinets"
   weight = 4
 
 [[main]]
-  name = "プロセス"
-  url = "/ja/processes/"
+  name = "木製スピーカーボックス製造"
+  url = "/ja/wooden-speaker-box-manufacturer/"
+  parent = "cabinets"
   weight = 5
 
 [[main]]
-  name = "リソース"
-  url = "/ja/resources/"
+  name = "カスタム空木製スピーカーキャビネットボックス"
+  url = "/ja/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+  parent = "cabinets"
   weight = 6
+
+[[main]]
+  name = "HiFiスピーカーキャビネット製造"
+  url = "/ja/hifi-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 7
+
+[[main]]
+  name = "スピーカーキャビネット製造"
+  url = "/ja/speaker-cabinet-manufacturing/"
+  parent = "cabinets"
+  weight = 8
+
+[[main]]
+  name = "音響木製スピーカーエンクロージャ"
+  url = "/ja/acoustic-wood-speaker-enclosures/"
+  parent = "cabinets"
+  weight = 9
+
+[[main]]
+  name = "リソース (EN)"
+  url = "/resources/"
+  weight = 3
+
+[[main]]
+  name = "会社概要"
+  url = "/ja/about-us/"
+  weight = 4
 
 [[main]]
   name = "お問い合わせ"
   url = "/ja/contact/"
-  weight = 7
+  weight = 5

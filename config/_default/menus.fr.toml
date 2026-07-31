@@ -1,5 +1,5 @@
 # ==========================================================================
-# menus.fr.toml — Industrial Manufacturer Template (Français Navigation)
+# menus.fr.toml — Woodsat Navigation Française
 # ==========================================================================
 
 [[main]]
@@ -8,31 +8,76 @@
   weight = 1
 
 [[main]]
-  name = "Services"
-  url = "/fr/services/"
+  name = "Enceintes en bois"
+  identifier = "cabinets"
+  url = "/fr/custom-wooden-speaker-cabinet-manufacturer/"
   weight = 2
 
 [[main]]
-  name = "Matériaux"
-  url = "/fr/materials/"
+  name = "Fabricant de coffrets acoustiques en bois sur mesure"
+  url = "/fr/custom-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 1
+
+[[main]]
+  name = "Fabricant d'enclos acoustiques en bois"
+  url = "/fr/wooden-speaker-enclosure-manufacturer/"
+  parent = "cabinets"
+  weight = 2
+
+[[main]]
+  name = "Fabricant OEM de coffrets acoustiques en bois"
+  url = "/fr/oem-wooden-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
   weight = 3
 
 [[main]]
-  name = "Secteurs"
-  url = "/fr/industries/"
+  name = "Usinage CNC pour coffrets acoustiques"
+  url = "/fr/speaker-cabinet-cnc-machining-service/"
+  parent = "cabinets"
   weight = 4
 
 [[main]]
-  name = "Procédés"
-  url = "/fr/processes/"
+  name = "Fabricant de caisses acoustiques en bois"
+  url = "/fr/wooden-speaker-box-manufacturer/"
+  parent = "cabinets"
   weight = 5
 
 [[main]]
-  name = "Ressources"
-  url = "/fr/resources/"
+  name = "Fabricant de coffrets acoustiques en bois vides sur mesure"
+  url = "/fr/custom-empty-wooden-speaker-cabinet-boxes-manufacturer/"
+  parent = "cabinets"
   weight = 6
+
+[[main]]
+  name = "Fabricant de coffrets HiFi"
+  url = "/fr/hifi-speaker-cabinet-manufacturer/"
+  parent = "cabinets"
+  weight = 7
+
+[[main]]
+  name = "Fabrication de coffrets acoustiques"
+  url = "/fr/speaker-cabinet-manufacturing/"
+  parent = "cabinets"
+  weight = 8
+
+[[main]]
+  name = "Enclos acoustiques en bois"
+  url = "/fr/acoustic-wood-speaker-enclosures/"
+  parent = "cabinets"
+  weight = 9
+
+[[main]]
+  name = "Ressources (EN)"
+  url = "/resources/"
+  weight = 3
+
+[[main]]
+  name = "À propos"
+  url = "/fr/about-us/"
+  weight = 4
 
 [[main]]
   name = "Contact"
   url = "/fr/contact/"
-  weight = 7
+  weight = 5

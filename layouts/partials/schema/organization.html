@@ -71,6 +71,14 @@
     {{ with $schema.addressRegion | default $org.identity.address_region }}"addressRegion": "{{ . | safeJS }}",{{ end }}
     {{ with $schema.addressCountry | default $org.identity.address_country }}"addressCountry": "{{ . | safeJS }}"{{ end }}
   }
+  {{- with $localized.industry }},
+  "industry": "{{ . | safeJS }}"{{ end -}}
+  {{- with $localized.areaServed }},
+  "areaServed": "{{ . | safeJS }}"{{ end -}}
+  {{- with $localized.knowsAbout }},
+  "knowsAbout": [
+    {{ range $i, $kw := . }}{{ if $i }}, {{ end }}"{{ $kw | safeJS }}"{{ end }}
+  ]{{ end -}}
   {{- if $sa -}}
   ,
   "sameAs": [

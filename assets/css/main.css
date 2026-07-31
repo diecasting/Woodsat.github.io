@@ -153,6 +153,33 @@ p { margin: 0 0 1.1rem; }
 }
 .nav-submenu a:hover { background: var(--bg-alt); color: var(--brand); }
 
+/* Language switcher — compact hover dropdown in the header */
+.lang-switcher { position: relative; margin-left: 12px; }
+.lang-current {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--radius-sm);
+  font-size: .8rem; font-weight: 600; letter-spacing: .04em; color: var(--ink-2);
+  background: #fff; cursor: default; transition: border-color .2s, color .2s;
+}
+.lang-current::after { content: "\25BE"; font-size: .7em; opacity: .6; }
+.lang-switcher:hover .lang-current,
+.lang-switcher:focus-within .lang-current { border-color: var(--brand); color: var(--brand); }
+.lang-list {
+  position: absolute; top: calc(100% + 8px); right: 0; z-index: 60;
+  min-width: 152px; margin: 0; padding: 6px; list-style: none;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); opacity: 0; visibility: hidden;
+  transform: translateY(-4px); transition: opacity .18s, transform .18s, visibility .18s;
+}
+.lang-switcher:hover .lang-list,
+.lang-switcher:focus-within .lang-list { opacity: 1; visibility: visible; transform: translateY(0); }
+.lang-item a, .lang-item span {
+  display: block; padding: 8px 12px; border-radius: 8px;
+  font-size: .9rem; font-weight: 500; color: var(--ink-2); text-decoration: none;
+}
+.lang-item a:hover { background: var(--bg-alt); color: var(--brand); }
+.lang-item.is-active span { color: var(--brand); font-weight: 600; }
+
 .nav-cta { margin-left: 8px; }
 .nav-toggle {
   display: none; flex-direction: column; gap: 5px; background: none; border: none;
@@ -435,7 +462,9 @@ p { margin: 0 0 1.1rem; }
 }
 @media (max-width: 768px) {
   :root { --header-h: 64px; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; order: 3; margin-left: 8px; }
+  .lang-switcher { order: 2; margin-left: auto; }
+  .lang-list { right: 0; left: auto; }
   .nav-menu {
     display: none; position: absolute; top: var(--header-h); left: 0; right: 0;
     flex-direction: column; align-items: stretch; gap: 2px; padding: 12px;
