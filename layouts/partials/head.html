@@ -1,8 +1,28 @@
 {{- /* head.html — Document head with SEO meta and GEO Schema rendering */ -}}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-{{ with .Description }}<meta name="description" content="{{ . }}">{{ else }}<meta name="description" content="{{ .Site.Params.seo.description }}">{{ end }}
+{{- /* SEO metadata priority */ -}}
+{{- $seoTitle := "Woodsat | Wooden Speaker Cabinet Manufacturer | OEM & ODM Audio Enclosures" -}}{{/* homepage default; overridden for non-home */}}
+{{- if not .IsHome -}}
+  {{- $mt := "" -}}
+  {{- with .Params.seo }}{{ with .meta_title }}{{ $mt = . }}{{ end }}{{ end -}}
+  {{- if $mt -}}
+    {{- $seoTitle = $mt -}}{{/* seo.meta_title already carries the brand once; do NOT append Site.Title */}}
+  {{- else -}}
+    {{- $seoTitle = printf "%s — %s" .Title .Site.Title -}}
+  {{- end -}}
+{{- end -}}
+{{- $seoDesc := "" -}}
+{{- with .Params.seo }}{{ with .meta_description }}{{ $seoDesc = . }}{{ end }}{{ end -}}
+{{- if not $seoDesc -}}
+  {{- if .Description -}}
+    {{- $seoDesc = .Description -}}
+  {{- else -}}
+    {{- $seoDesc = .Site.Params.seo.description -}}
+  {{- end -}}
+{{- end -}}
+<title>{{ $seoTitle }}</title>
+<meta name="description" content="{{ $seoDesc }}">
 {{ with .Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 <meta name="author" content="{{ .Site.Params.Author.name }}">
 <link rel="canonical" href="{{ .Permalink }}">
@@ -10,19 +30,19 @@
 {{ if .IsTranslated }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ range .Translations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ end }}{{ end }}{{ $xdefault := .Permalink }}{{ range .Translations }}{{ if eq .Language.Lang "en" }}{{ $xdefault = .Permalink }}{{ end }}{{ end }}<link rel="alternate" hreflang="x-default" href="{{ $xdefault }}">
-{{ with .Site.Language.Params.locale }}<meta property="og:locale" content="{{ . | replace "-" "_" }}">{{ end }}
+{{ $loc := dict "en" "en_US" "de" "de_DE" "ja" "ja_JP" "fr" "fr_FR" "es" "es_ES" }}{{ with index $loc .Site.Language.Lang }}<meta property="og:locale" content="{{ . }}">{{ end }}
 
 <!-- Open Graph -->
-<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.seo.description }}{{ end }}">
+<meta property="og:title" content="{{ $seoTitle }}">
+<meta property="og:description" content="{{ $seoDesc }}">
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-{{ with .Description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+<meta name="twitter:title" content="{{ $seoTitle }}">
+<meta name="twitter:description" content="{{ $seoDesc }}">
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}">{{ end }}
