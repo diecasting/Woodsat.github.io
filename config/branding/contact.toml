@@ -16,4 +16,4 @@
   # https://formspree.io and replace REPLACE_WITH_FORM_ID with your real
   # Formspree form ID. Submissions are emailed to jason@woodsat.com.
   # If left empty, the template shows a graceful email CTA instead.
-  form_action = "https://formspree.io/f/REPLACE_WITH_FORM_ID"
+  form_action = "https://formspree.io/f/xdaqjegz"
