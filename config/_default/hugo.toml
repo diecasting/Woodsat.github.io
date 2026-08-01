@@ -7,7 +7,7 @@
 # All other branding lives in config/_default/params.toml.
 # ==========================================================================
 
-baseURL = "https://diecasting.github.io/Woodsat.github.io/"
+baseURL = "https://blog.woodsat.com/"
 locale = "en-US"
 title = "Woodsat"
 defaultContentLanguage = "en"
@@ -16,9 +16,9 @@ enableRobotsTXT = true
 enableGitInfo = true
 enableMissingTranslationPlaceholders = false
 
-# baseURL contains a sub-path (GitHub project page). Root-relative links written
-# in markdown (e.g. /de/contact/) must be rewritten to include that sub-path,
-# otherwise every in-content link 404s. canonifyURLs handles this globally.
+# Custom domain (root, no sub-path). Root-relative links written in markdown
+# (e.g. /de/contact/) resolve directly under blog.woodsat.com; canonifyURLs
+# rewrites them to absolute URLs globally so in-content links never 404.
 canonifyURLs = true
 
 # Pagination

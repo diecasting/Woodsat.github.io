@@ -5,8 +5,29 @@ import sys
 from urllib.parse import urlparse, unquote
 
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "public"
-BASE = "https://diecasting.github.io/Woodsat.github.io"
-BASE_PATH = "/Woodsat.github.io"
+
+# Derive the site base URL from Hugo config so this check never silently turns
+# into a no-op after a domain change. If baseURL is a root domain, BASE_PATH is
+# empty; if it is a project sub-path, BASE_PATH holds that prefix.
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CONFIG_PATH = os.path.join(REPO_ROOT, "config", "_default", "hugo.toml")
+FALLBACK_BASE = "https://blog.woodsat.com"
+
+
+def read_base_url(path):
+    try:
+        with open(path, encoding="utf-8") as fh:
+            for line in fh:
+                m = re.match(r"""\s*baseURL\s*=\s*["']([^"']+)["']""", line)
+                if m:
+                    return m.group(1).rstrip("/")
+    except OSError:
+        pass
+    return FALLBACK_BASE
+
+
+BASE = read_base_url(CONFIG_PATH)
+BASE_PATH = urlparse(BASE).path.rstrip("/")
 
 href_re = re.compile(r'href=(?:"([^"]*)"|\'([^\']*)\'|([^\s>]+))')
 
@@ -33,7 +54,7 @@ for dirpath, _dirs, files in os.walk(ROOT):
             elif raw.startswith(("http://", "https://")):
                 external.add(urlparse(raw).netloc)
                 continue
-            elif raw.startswith(BASE_PATH):
+            elif BASE_PATH and raw.startswith(BASE_PATH):
                 target = raw[len(BASE_PATH):]
             elif raw.startswith("/"):
                 target = raw
@@ -52,6 +73,7 @@ for dirpath, _dirs, files in os.walk(ROOT):
             if not any(os.path.isfile(c) for c in candidates):
                 broken.setdefault(target, set()).add(os.path.relpath(path, ROOT))
 
+print("base URL:", BASE)
 print("internal links checked:", checked)
 print("broken targets:", len(broken))
 for t in sorted(broken):
