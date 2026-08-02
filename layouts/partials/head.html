@@ -26,6 +26,8 @@
 {{ with .Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
 <meta name="author" content="{{ .Site.Params.Author.name }}">
 <link rel="canonical" href="{{ .Permalink }}">
+{{/* Google Search Console verification */}}
+<meta name="google-site-verification" content="Mi65cRhPfvJOI_qt5OihCgQUfqq6DdUCq_AgcUFdfko">
 {{ if in (slice "taxonomy" "term") .Kind }}<meta name="robots" content="noindex, follow">{{ end }}
 {{ if .IsTranslated }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
 {{ range .Translations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
